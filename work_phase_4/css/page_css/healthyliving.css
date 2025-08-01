@@ -1,0 +1,482 @@
+/* =============================
+   SECTION WRAPPER
+============================= */
+.healthy-living-section {
+    padding: 2rem 1rem;
+    background-color: #fffefc;
+    color: var(--text-color);
+}
+
+/* =============================
+   MAIN FLEX LAYOUT (Mobile First)
+============================= */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.two-column-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* =============================
+   FEATURED RECIPE COMPONENT
+============================= */
+.featured-recipe {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.recipe-info {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.recipe-info h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.recipe-info p {
+    margin: 0.5rem 0 1rem;
+}
+
+.primary-button {
+    padding: 0.6rem 1.2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* =============================
+   HEALTH METER
+============================= */
+.health-meter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.health-gauge {
+    position: relative;
+    width: 100px;
+    height: 60px;
+}
+
+.gauge-arc {
+    width: 100%;
+    height: 60px;
+}
+
+.gauge-arc path {
+    fill: none;
+    stroke: var(--accent-color);
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.gauge-needle {
+  position:absolute;
+  left: 50%;
+  top: 20%;
+  width: 3px;
+  height: 35px;
+  background-color: var(--primary-color);
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(60deg); /* example for level 8/10 */
+  transition: transform 0.4s ease;
+}
+
+.gauge-label {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* =============================
+   NUTRITION TABLE
+============================= */
+.nutrition-table-wrapper {
+    width: 100%;
+    margin-top: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nutrition-table-wrapper h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.nutrition-table {
+    width: 100%;
+    min-width: 200px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    table-layout: fixed;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+    padding: 0.5rem;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s ease;
+}
+
+.nutrition-table th:nth-child(1),
+.nutrition-table td:nth-child(1) {
+    width: 30%;
+}
+
+.nutrition-table th:nth-child(2),
+.nutrition-table td:nth-child(2) {
+    width: 30%;
+}
+
+.nutrition-table th:nth-child(3),
+.nutrition-table td:nth-child(3) {
+    width: 25%;
+}
+
+.nutrition-table thead th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+.nutrition-table tbody tr:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.nutrition-table tbody tr:hover {
+    background-color: #fcf9f5;
+}
+
+.nutrition-table td.sub {
+    font-style: italic;
+    color: gray;
+}
+
+/* =============================
+   LATEST HEALTH NEWS
+============================= */
+.latest-health-news {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+}
+
+.latest-health-news h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.latest-health-news ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.latest-health-news li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.latest-health-news li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.latest-health-news .tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.latest-health-news .title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0.25rem 0;
+}
+
+.latest-health-news .meta {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* =============================
+   NEWS LINK BEHAVIOR
+============================= */
+.news-link {
+    text-decoration: none;
+    color: var(--text-color);
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.news-link.title:hover {
+    text-decoration: underline;
+}
+
+.news-link img:hover {
+    opacity: 0.8;
+}
+
+#toggle-nutrition {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* =============================
+   MORE RECIPES SECTION
+============================= */
+.more-recipes-section {
+    padding-top: 1rem;
+}
+
+.more-recipes-section h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.recipe-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.recipe-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.recipe-card img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.recipe-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.recipe-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    text-align: center;
+}
+
+.recipe-link h4 {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.recipe-link:hover h4 {
+    text-decoration: underline;
+}
+
+.recipe-link img {
+    transition: opacity 0.2s ease;
+}
+
+.recipe-link:hover img {
+    opacity: 0.9;
+}
+
+.recipe-title-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-top: 0.5rem;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.recipe-title-link:hover {
+    text-decoration: underline;
+}
+
+/* =============================
+   MINI HEALTH GAUGE (Card)
+============================= */
+.mini-gauge {
+    position: relative;
+    width: 80px;
+    height: 50px;
+}
+
+.mini-arc {
+    width: 100%;
+    height: 50px;
+}
+
+.mini-arc path {
+    fill: none;
+    stroke: var(--accent-color);
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+
+.mini-needle {
+  position: absolute;
+  left: 50%;
+  top: 20%; /* start at bottom of arc container */
+  width: 2px;
+  height: 30px; /* or 40px for large gauge */
+  background-color: var(--primary-color);
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(60deg); /* example: 60deg for 8/10 */
+  transition: transform 0.4s ease;
+}
+
+/* =============================
+   RESPONSIVE BREAKPOINTS
+============================= */
+@media (max-width: 480px) {
+    .nutrition-table {
+        font-size: 0.85rem;
+    }
+
+    .nutrition-table-wrapper h3 {
+        font-size: 1.05rem;
+    }
+
+    .nutrition-table th,
+    .nutrition-table td {
+        padding: 0.4rem 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .featured-recipe {
+        flex: 8;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .image-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .image-wrapper img {
+        width: 70%;
+    }
+
+    .health-meter-wrapper {
+        width: 30%;
+        max-width: 320px;
+    }
+
+    .latest-health-news {
+        flex: 2;
+        padding-left: 2rem;
+    }
+
+    .latest-health-news ul {
+        gap: 1.5rem;
+    }
+
+    .latest-health-news li img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .latest-health-news .title {
+        font-size: 1.1rem;
+    }
+
+    .latest-health-news .meta {
+        font-size: 0.9rem;
+    }
+
+    .two-column-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .left-column {
+        flex: 8;
+    }
+
+    .recipe-card-grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .recipe-card {
+        max-width: 32%;
+    }
+}

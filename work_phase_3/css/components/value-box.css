@@ -1,0 +1,24 @@
+.value-box {
+    background-color: var(
+        --background-color
+    ); /* Use color variable from base.css */
+    border: 2px solid var(--primary-color); /* Use primary theme color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px 20px; /* Space inside the box */
+    margin: 10px 0; /* Space between boxes */
+    font-weight: 500; /* Medium weight for emphasis */
+    color: var(--text-color, #333); /* Text color from base.css */
+    text-align: center; /* Align text properly */
+    display: block; /* Ensure it spans full width */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+.value-box:hover {
+    background-color: var(--hover-bg, #e9ecef); /* Subtle hover effect */
+    border-color: var(--hover-border, #0056b3); /* Darker border on hover */
+}
+@media (max-width: 768px) {
+    .value-box {
+        height: 26rem;
+    }
+}

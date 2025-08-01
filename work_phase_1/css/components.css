@@ -1,0 +1,114 @@
+/* color reference: #e8eef1 , #bfdff1, #abd7f1, #96c0f1, #6dc0f1, #43b0f1, #057dcd, #1e3d58 */
+/* text color : #d0b290 */
+/* Temperature Widget Styles */
+.temperature-widget {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--color-dark);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #057dcd;
+}
+/* self-build */
+
+.navbar {
+    position:sticky;
+    top:0;
+    background-color: #1e3d58;
+}
+.vertical-container {
+    font-family: "Ruluko", sans-serif;
+    display: flex;
+    flex-direction:row; /* Stack cards row on mobile */
+    align-items: center; /* Center cards */
+    gap: 1rem; /* Add space between cards */
+    padding: 0.5rem;
+    background-color:#bfdff1;
+}
+
+.card-container {
+    font-family: "Ruluko", sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center; /* Center cards */
+    gap: 1rem; /* Add space between cards */
+    padding: 1rem;
+}
+.simple-card {
+    font-family: "Ruluko", sans-serif;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.Grid container{
+    display:grid
+}
+
+/* button styles */
+.button {
+    padding: 10px 20px;
+    border-radius: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* new */
+    font-weight: bold;
+}
+/* color reference: #e8eef1 , #bfdff1, #abd7f1, #96c0f1, #6dc0f1, #43b0f1, #057dcd, #1e3d58 */
+
+/* button color variants */
+.button-primary {
+    background-color: #e8eef1 ;
+    color:#43b0f1;
+}
+
+.button-secondary {
+    background-color: #bfdff1;
+    color:#43b0f1;
+}
+
+.button-dark {
+    background-color: #1e3d58 ;
+    color: #abd7f1 ;
+}
+
+.button-bright {
+    background-color: #bfdff1 ;
+    color: #1e3d58;
+}
+
+
+/* Hover Effect for Buttons */
+.button:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transform: translateY(-2px); /* Lifts the button slightly */
+    transition: all 0.2s ease-in-out; /* Smooth transition */
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row; /* Align cards in a row */
+        flex-wrap: wrap; /* Allow wrapping if space is limited */
+        justify-content: center; /* Center cards in the container */
+    }
+
+    .simple-card {
+        width: auto; /* Allow cards to size dynamically */
+        flex: 1 1 280px; /* Flexible sizing for desktop */
+    }
+}
+
+
+

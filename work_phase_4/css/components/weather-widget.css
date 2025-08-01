@@ -1,0 +1,50 @@
+/* =============================
+   Weather Widget Container (Mobile First)
+============================= */
+#weather-widget {
+  display: flex;
+  flex-direction: row; /* Layout: icon + text side by side */
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  border: 2px solid var(--accent-color); /* Fixed: added variable */
+  border-radius: 1rem;
+  padding: 0.6rem 1rem;
+  width: auto; /* Fit to content */
+  color: var(--primary-color);
+  gap: 1rem;
+}
+
+/* =============================
+   Weather Icon
+============================= */
+#weather-widget img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* =============================
+   Text Styles
+============================= */
+#weather-day,
+#weather-temp {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* =============================
+   Desktop Enhancements
+============================= */
+@media (min-width: 768px) {
+  #weather-widget {
+    width: 16rem;
+    height: 3rem;
+    right: 50px;
+  }
+
+  #weather-day,
+  #weather-temp {
+    font-size: 1.3rem;
+  }
+}

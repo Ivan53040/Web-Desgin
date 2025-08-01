@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/contactus.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <title>Work Phase 4 - Contact Us</title>
+    </head>
+    <body>
+        <section>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="homepage.html">Homepage</a> &gt;
+                <span>Contact Us</span>
+            </nav>
+
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+                <div class="mobile-expandable-menu">
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">Home Page</a></li>
+                            <li>
+                                <a href="culture_showcase.html"
+                                    >Culture Showcase</a
+                                >
+                            </li>
+                            <li>
+                                <a href="recipes&cooking.html"
+                                    >Recipes & Cooking</a
+                                >
+                            </li>
+                            <li>
+                                <a href="healthy_living.html">Healthy Living</a>
+                            </li>
+                            <li>
+                                <a href="sharing_area.html">Sharing Area</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="culture_showcase.html">Culture Showcase</a>
+                        </li>
+                        <li>
+                            <a href="recipes&cooking.html"
+                                >Recipes and Cooking</a
+                            >
+                        </li>
+                        <li>
+                            <a href="healthy_living.html">Healthy Living</a>
+                        </li>
+                        <li><a href="sharing_area.html">Sharing Area</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="wp4-search-container">
+                        <div class="search-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                class="wp4-search-input"
+                                aria-label="Search"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <main aria-label="Contact Page Main Content">
+            <section class="contactus-wrapper">
+                <div class="contactus-box">
+                    <img
+                        src="assets/images/contactus.png"
+                        alt="Report a problem illustration"
+                        class="contactus-floating-image"
+                    />
+                    <section
+                        class="contact-form-section"
+                        aria-labelledby="contact-heading"
+                    >
+                        <h1 id="contact-heading" class="page-title">
+                            Contact Us / Submit a Problem
+                        </h1>
+                        <form
+                            id="contact-form"
+                            class="styled-form"
+                            aria-label="Contact Form"
+                        >
+                            <label for="full-name">Full Name (Required)</label>
+                            <input
+                                type="text"
+                                id="full-name"
+                                name="full-name"
+                                required
+                            />
+
+                            <label for="email">Email (Required)</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            />
+
+                            <label for="issue-type"
+                                >Issue Type (Required)</label
+                            >
+                            <select id="issue-type" name="issue-type" required>
+                                <option value="">-- Please select --</option>
+                                <option value="bug">
+                                    Bug or technical issue
+                                </option>
+                                <option value="feedback">
+                                    Feedback or suggestion
+                                </option>
+                                <option value="content">
+                                    Content correction
+                                </option>
+                                <option value="other">Other</option>
+                            </select>
+
+                            <label for="message">Message (Optional)</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                            ></textarea>
+
+                            <label for="screenshot"
+                                >Upload Screenshot (Optional)</label
+                            >
+                            <input
+                                type="file"
+                                id="screenshot"
+                                name="screenshot"
+                                accept="image/*"
+                            />
+
+                            <button type="submit" class="button button-primary">
+                                Submit
+                            </button>
+                        </form>
+                    </section>
+                </div>
+            </section>
+
+            <section class="find-us-section" aria-label="Social Media Links">
+                <h2>Or Find us on</h2>
+                <div class="social-marquee">
+                    <div class="social-track">
+                        <a
+                            href="https://facebook.com"
+                            target="_blank"
+                            aria-label="Facebook"
+                        >
+                            <img
+                                src="assets/icon/facebook.png"
+                                alt="Facebook"
+                            />
+                        </a>
+                        <a
+                            href="https://instagram.com"
+                            target="_blank"
+                            aria-label="Instagram"
+                        >
+                            <img
+                                src="assets/icon/instagram.png"
+                                alt="Instagram"
+                            />
+                        </a>
+                        <a
+                            href="https://twitter.com"
+                            target="_blank"
+                            aria-label="Twitter (X)"
+                        >
+                            <img src="assets/icon/x.png" alt="Twitter (X)" />
+                        </a>
+                        <a
+                            href="https://youtube.com"
+                            target="_blank"
+                            aria-label="YouTube"
+                        >
+                            <img src="assets/icon/youtube.png" alt="YouTube" />
+                        </a>
+
+                        <!-- Looping set -->
+                        <a
+                            href="https://facebook.com"
+                            target="_blank"
+                            aria-hidden="true"
+                        >
+                            <img src="assets/icon/facebook.png" alt="" />
+                        </a>
+                        <a
+                            href="https://instagram.com"
+                            target="_blank"
+                            aria-hidden="true"
+                        >
+                            <img src="assets/icon/instagram.png" alt="" />
+                        </a>
+                        <a
+                            href="https://twitter.com"
+                            target="_blank"
+                            aria-hidden="true"
+                        >
+                            <img src="assets/icon/x.png" alt="" />
+                        </a>
+                        <a
+                            href="https://youtube.com"
+                            target="_blank"
+                            aria-hidden="true"
+                        >
+                            <img src="assets/icon/youtube.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- JavaScript Modules -->
+        <script type="module" src="js/contactus.js"></script>
+
+        <script type="module">
+            import { setupContactFormSubmission } from "./js/modules/contactFormHandler.js";
+            setupContactFormSubmission();
+        </script>
+    </body>
+</html>

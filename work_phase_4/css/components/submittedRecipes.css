@@ -1,0 +1,67 @@
+/* =============================
+   Upload Grid (Mobile First)
+============================= */
+.upload-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* =============================
+   Upload Card Container
+============================= */
+.upload-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.upload-card:hover {
+  transform: translateY(-4px);
+}
+
+/* =============================
+   Image Styling
+============================= */
+.upload-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* =============================
+   Text Content
+============================= */
+.upload-info {
+  padding: 1rem;
+}
+
+.upload-info h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.upload-info p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+/* =============================
+   Responsive Layout
+============================= */
+@media (min-width: 768px) {
+  .upload-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .upload-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

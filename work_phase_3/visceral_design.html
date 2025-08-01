@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/visceral_design.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+
+        <title>Work Phase 3 - visceral design</title>
+    </head>
+    <body>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html"><span class="icon">🧭</span></a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        ><span class="icon">🎨</span></a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html">WP3 Home</a>
+                </li>
+                <li>
+                    <a href="site_map.html">Site Map</a>
+                </li>
+                <li>
+                    <a href="style_guide.html" aria-current="page"
+                        >Style Guide</a
+                    >
+                </li>
+                <li>
+                    <a href="ethical_response.html">Ethics Response</a>
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html">GENAI</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <a href="index.html">Home</a> &gt;
+                    <a href="style_guide.html">Style Guide</a> &gt;
+                    <span>Visceral Design</span>
+                </nav>
+                <h1 class="m-y-5">Visceral Design</h1>
+                <p class="hero-text">
+                    Visceral design is the first level of design, focusing on
+                    the immediate emotional response a user has to a product. It
+                    encompasses the initial impressions and feelings evoked by
+                    the product's appearance, feel, and sound..
+                </p>
+                <h2 class="m-t-3">Page Layouts</h2>
+                <h3>Mobile</h3>
+                <!-- Gallery and Viewer will go here -->
+
+                <section class="gallery">
+                    <img
+                        src="assets/page layout/MobileHomepage.jpg"
+                        alt="Mobile Homepage Layout: Designed as the primary mobile entry point to the platform, supporting client goals for diverse communities, heritage, and healthy living (Client Needs). The layout is optimized for mobile user needs, providing easy navigation and content discovery on a smaller screen (User Stories). Designed for mobile accessibility with touch-friendly elements and readable typography (Accessibility, Perceivable, Operable, Understandable). The clean mobile design maintains the welcoming and organized visceral feel of the site on a phone (Visceral Design)."
+                    />
+                    <img
+                        src="assets/page layout/MobileShowcase.jpg"
+                        alt="Mobile Showcase Layout: Designed as a mobile-friendly space to highlight cultural food heritage and farmer stories, supporting client goals for preserving tradition and building diverse communities (Client Needs). The layout caters to mobile user interest in cultural context and local food sources with clear sections and descriptions (User Stories). Optimized for mobile accessibility with clear headings, touch targets, and readability (Accessibility, Perceivable, Operable). The visual arrangement aims to create a culturally rich and connecting visceral experience on a smaller screen (Visceral Design)."
+                    />
+                    <img
+                        src="assets/page layout/MobileRecipeHub.jpg"
+                        alt="Mobile Recipe Hub Layout: Designed as a mobile-friendly space for recipe discovery, supporting client goals for diverse, traditional, and healthy food (Client Needs). The layout caters to mobile user needs to easily find and explore recipes on the go through organized sections (User Stories). Optimized for mobile accessibility with clear headings, touch targets, and readability (Accessibility, Perceivable, Operable). The visually appealing and easy-to-navigate mobile design creates an inspiring and food-focused visceral experience (Visceral Design)."
+                    />
+                    <img
+                        src="assets/page layout/MobileForum.jpg"
+                        alt="Mobile Forum Layout: Designed as a key mobile space for community discussion and interaction, supporting client goals for diverse and inclusive communities (Client Needs). The layout facilitates mobile user needs for connection, asking questions, and accessing chat, with touch-friendly navigation and clear topic Browse (User Stories). Optimized for mobile accessibility with clear headings, touch targets, and readability on a small screen (Accessibility, Operable, Understandable). The clean mobile design aims to create an inviting and accessible visceral feeling for community engagement on the go (Visceral Design)."
+                    />
+                    <img
+                        src="assets/page layout/MobileContactUs.jpg"
+                        alt="Mobile Contact Us Page Layout: Provides a clear and trustworthy way for users to contact the platform and find social media links on mobile devices, supporting client goals and user needs for support and connection (Client Needs, User Stories). The layout is optimized for mobile accessibility with clear labels, touch-friendly input fields, and readable typography (Accessibility, Operable, Understandable). The clean design ensures a reliable and comforting visceral experience on a smaller screen, consistent with the site's overall feel (Visceral Design)."
+                    />
+                    <!-- Large Image Viewer -->
+                    <aside class="viewer" id="viewer" aria-hidden="true">
+                        <button
+                            id="close-viewer"
+                            aria-label="Close image viewer"
+                        >
+                            ✖
+                        </button>
+                        <img id="viewer-img" src="" alt="" />
+                        <p id="viewer-caption"></p>
+                    </aside>
+                </section>
+
+                <section class="gallery">
+                    <img
+                        src="assets/page layout/DesktopHomePage.jpg"
+                        alt="Desktop Homepage Layout: Designed as a welcoming entry point (Visceral) to content supporting diverse communities, heritage, and healthy living (Client Needs). Key areas like the menu, search, and showcases facilitate easy navigation and content discovery for users (User Stories). The clear structure and interactive elements are designed with perceivability, operability, and understandability in mind (Accessibility)."
+                    />
+                    <img
+                        src="assets/page layout/DesktopShowCase.jpg"
+                        alt="Desktop Showcase Layout: Designed to highlight cultural food heritage and farmer stories, directly supporting client goals for preserving tradition and building diverse communities (Client Needs). The layout caters to user interest in cultural context, learning about ingredients, connecting with local producers, and providing a way for users to share their own stories and heritage (User Stories). Headings, interactive elements, and space for image/media descriptions consider perceivability and operability (Accessibility). The visual arrangement aims to evoke a sense of cultural richness and connection, aligned with the site's warm and inviting visceral design (Visceral Design)."
+                    />
+                    <img
+                        src="assets/page layout/DesktopRecipeHub.jpg"
+                        alt="Desktop Recipe Hub Layout: Organizes recipes into browsable sections to meet user needs for discovery and sharing (User Stories). This supports the client's goals of promoting diverse, traditional, and healthy food (Client Needs). The clear structure with distinct areas and interactive elements like the submit button are designed for perceivability and operability (Accessibility). The layout provides a visually appealing and easy-to-navigate Browse experience, consistent with the site's warm and food-focused visceral design (Visceral Design)."
+                    />
+                    <img
+                        src="assets/page layout/DesktopForum.jpg"
+                        alt="Desktop Forum Layout: Designed as a central hub for discussion and interaction, directly supporting the client's goal of cultivating diverse and inclusive communities (Client Needs). The layout with search, topic catalog, and links to related features addresses user needs for connection, asking questions, and sharing knowledge within a community space (User Stories). The clear structure and interactive elements are designed for perceivability, operability, and understandability, promoting accessible participation (Accessibility). The organization and visual consistency aim to create an inviting and supportive visceral feeling for community engagement (Visceral Design)."
+                    />
+                    <img
+                        src="assets/page layout/DesktopContactus.jpg"
+                        alt="Desktop Contact Us Page Layout: Provides users with a clear and trustworthy way to get in touch and find social media links, supporting the client's goal of building a reliable community (Client Needs, User Stories). The straightforward form with labeled fields is designed for ease of use and accessibility (Accessibility, especially Input Assistance). The simple layout contributes to a feeling of reliability and ease, aligning with the site's overall comforting visceral design (Visceral Design)."
+                    />
+                    <!-- Large Image Viewer -->
+                    <aside class="viewer" id="viewer" aria-hidden="true">
+                        <button
+                            id="close-viewer"
+                            aria-label="Close image viewer"
+                        >
+                            ✖
+                        </button>
+                        <img id="viewer-img" src="" alt="" />
+                        <p id="viewer-caption"></p>
+                    </aside>
+                </section>
+                <div class="element-to-animate js-animate-sequence is-hidden">
+                    <section>
+                        <h2>Colour Scheme</h2>
+                        <p>
+                            I used brown as the base colour for the my design.
+                            The reason for this is that brown is a colour that
+                            is associated with
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >warmth, comfory</span
+                            >. As the website aims to be a
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >inclusive</span
+                            >
+                            and welcoming space for all users, providing them
+                            with a sense of comfort and security can encourge
+                            them to revisit the site. <br />Moreover, the colour
+                            brown also associated withe the
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >nature and healthy</span
+                            >, which also can relate to the
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >healthy lifestyle</span
+                            >
+                            the website want to promote. <br />
+                            As result, choosing brown is as the main colour can
+                            associated with the value of the website.
+                        </p>
+                        <br />
+                        <h3>The colour scheme is as follows:</h3>
+                        <div class="card-container">
+                            <div
+                                class="simple-card"
+                                style="background-color: #6b331e"
+                            >
+                                <h3 style="color: white">
+                                    Primary colour<br />(#6B331E) - Warm brown
+                                </h3>
+                            </div>
+                            <div
+                                class="simple-card"
+                                style="background-color: #20282e"
+                            >
+                                <h3 style="color: white">
+                                    Secondary colour<br />(#20282E) - Light
+                                    brown
+                                </h3>
+                            </div>
+                            <div
+                                class="simple-card"
+                                style="background-color: #331107"
+                            >
+                                <h3 style="color: white">
+                                    Accent colour<br />(#331107) - Rich earthy
+                                    brown
+                                </h3>
+                            </div>
+                            <div
+                                class="simple-card"
+                                style="background-color: #170300"
+                            >
+                                <h3 style="color: white">
+                                    Text colour<br />(#170300) - Deep brown
+                                </h3>
+                            </div>
+                            <div
+                                class="simple-card"
+                                style="background-color: #f2f1ef"
+                            >
+                                <h3>
+                                    Background colour<br />(#F2F1EF) - Soft
+                                    off-white
+                                </h3>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="element-to-animate js-animate-sequence is-hidden">
+                    <section>
+                        <h2>Typography</h2>
+                        <p>
+                            The font I used for the website is "Nunito",
+                            sans-serif. As the website aims to be a
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >welcoming and inclusive</span
+                            >
+                            space for all users, I chose this font because it is
+                            a sans-serif font that is easy to read and has a
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >friendly and approachable feel.</span
+                            >
+                            <br />The font is also modern and clean, which
+                            aligns with the website's goal of promoting a
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >healthy lifestyle.</span
+                            >
+                            <br />The font size follow the golden ratio, which
+                            is a design principle that is often used in design
+                            to create a sense of
+                            <span
+                                style="
+                                    font-weight: bold;
+                                    background-color: yellow;
+                                "
+                                >harmony and balance.</span
+                            >
+                            I set the font size in screen size to be 1rem and
+                            mobile to be 0.75rem, and times 1.618 for the next
+                            size. Up to 4.2 rem for screen size and 3.5rem for
+                            mobile size. <br />This time I decided to change the
+                            font weight only when needed to maintain the harmony
+                            of the design. <br />The font weight is set to 400
+                            for normal text and 700 for headings.
+                        </p>
+                        <div class="card-container">
+                            <div class="simple-card">
+                                <h1>H1</h1>
+                                <p>Font Size(screen/mobile): 4.2/3.24rem</p>
+                                <p>Colour: Primary colour</p>
+                            </div>
+                            <div class="simple-card">
+                                <h2>H2</h2>
+                                <p>Font Size(screen/mobile): 2.6/2rem</p>
+                                <p>Colour: Primary colour</p>
+                            </div>
+                            <div class="simple-card">
+                                <h3>H3</h3>
+                                <p>Font Size(screen/mobile): 1.6/1.23rem</p>
+                                <p>Colour: Primary colour</p>
+                            </div>
+                            <div class="simple-card">
+                                <p>Paragraph</p>
+                                <p>Font Size(screen/mobile): 1/0.75rem</p>
+                                <p>Colour: Primary colour</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <script type="module" src="js/visceral_design.js"></script>
+        <script type="module" src="js/modules/animation.js"></script>
+    </body>
+</html>

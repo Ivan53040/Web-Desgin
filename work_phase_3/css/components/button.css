@@ -1,0 +1,111 @@
+/* Base button styles */
+.button {
+    font-family: "Nunito", sans-serif ;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Primary button styles */
+.button-primary {
+    border-radius: 40px;
+    width: 120px;
+    background-color: color-mix(in srgb, var(--primary-color) 30%, transparent);
+    color: var(--secondary-color);
+}
+
+.button-primary:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 90%, transparent);
+    color: var(--background-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-primary:active {
+    background-color: color-mix(in srgb, var(--primary-color) 70%, transparent);
+    color: var(--background-color);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.button-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+/* Secondary button styles */
+.button-secondary {
+    border-radius: 15px;
+    width: 200px;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.button-secondary:hover {
+    background-color: color-mix(in srgb, var(--secondary-color) 90%, transparent);
+    color: var(--background-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-secondary:active {
+    background-color: color-mix(in srgb, var(--primary-color) 70%, transparent);
+    color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.button-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+}
+
+/* Search button styles */
+.search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: var(--background-color);
+    color: var(--accent-color);
+}
+
+.search-button .icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.search-button:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 20%, transparent);
+    color: var(--secondary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-button:active {
+    background-color: color-mix(in srgb, var(--primary-color) 70%, transparent);
+    color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.search-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px var(--accent-color);
+}
+
+/* Disabled state for all buttons */
+.button:disabled,
+.button[aria-disabled="true"] {
+    background-color: var(--disabled-primary-color);
+    color: var(--disabled-text-color);
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    transform: none;
+    pointer-events: none;
+}

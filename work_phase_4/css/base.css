@@ -1,0 +1,58 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: "Nunito", sans-serif ;
+    color: var(--text-color); /* color applies to text */
+    line-height: 1.5;
+    font-weight: 400;
+    
+}
+
+h1 {
+    font-size: 3.24rem;/* 2 x 1.618 rounded */
+    color: var(--primary-color);
+    font-weight: 700; /* Added for better readability */
+    
+}
+
+h2 {
+    font-size: 2rem;/* 1.23 x 1.618 rounded */
+    color: var(--primary-color);
+    font-weight: 700; /* Added for better readability */
+}
+
+h3 {
+    font-size: 1.23rem;/* 0.76 x 1.618 rounded */
+    font-weight: 700; /* Added for better readability */
+}
+
+p {
+    font-size: 0.75rem; 
+    line-height: 2;
+}
+
+.page-title{
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    body{
+        padding-top: 60px
+    }
+    h1 {
+        font-size:4.2rem; /* Added unit */
+    }
+    h2 {
+        font-size:2.6rem; /*2/1.618 */
+    }
+    h3 {
+        font-size:1.6rem;
+    }
+    p {
+        font-size:1rem;
+    }
+    .page-title{
+        text-align: left;
+    }
+}

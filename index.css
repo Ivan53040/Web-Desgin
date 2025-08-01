@@ -1,0 +1,74 @@
+/* index.css (mobile-first) */
+.index-wrapper {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+    font-family: 'Ruluko', sans-serif;
+}
+
+.index-wrapper h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.index-wrapper h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.index-wrapper p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.index-wrapper a {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.index-wrapper a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+.links-section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Desktop improvements */
+@media (min-width: 768px) {
+    .index-wrapper {
+        padding: 3rem;
+    }
+
+    .index-wrapper h1 {
+        font-size: 3rem;
+    }
+
+    .links-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .links-section a {
+        width: fit-content;
+    }
+}
+
+

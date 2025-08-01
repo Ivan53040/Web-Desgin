@@ -1,0 +1,185 @@
+/* ================================
+   Contact Us Page Wrapper & Layout
+   Mobile First
+================================= */
+.contactus-container,
+.contactus-wrapper {
+  padding: 2rem 1rem;
+  margin: auto;
+}
+
+.contactus-container {
+  max-width: 800px;
+}
+
+.contactus-wrapper {
+  max-width: 100%;
+  position: relative;
+}
+
+.contactus-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* ================================
+   Title and Description
+================================= */
+.page-title {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-description {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+}
+
+/* ================================
+   Form Styling
+================================= */
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.styled-form label {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.styled-form input,
+.styled-form select,
+.styled-form textarea {
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.75rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.styled-form input:focus,
+.styled-form textarea:focus,
+.styled-form select:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+/* ================================
+   Submit Button
+================================= */
+.button.button-primary {
+  align-self: center;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* ================================
+   Image Viewer
+================================= */
+.contactus-image-viewer {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.contactus-image-viewer img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactus-image-viewer button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--accent-color);
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* ================================
+   Background Box & Floating Image
+================================= */
+.contactus-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.contactus-floating-image {
+  display: none;
+}
+
+.contact-form-section {
+  position: relative;
+  z-index: 1;
+  padding-left: 0;
+}
+
+/* ================================
+   Desktop Overrides
+================================= */
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .styled-form {
+    gap: 1.5rem;
+  }
+
+  .contactus-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .contactus-image-viewer {
+    flex: 1;
+    margin: 0;
+  }
+
+  .contact-form-section {
+    flex: 1;
+    padding-left: 2rem;
+  }
+
+  .styled-form input,
+  .styled-form select,
+  .styled-form textarea {
+    width: 35rem;
+  }
+
+  .contactus-floating-image {
+    display: block;
+    position: absolute;
+    top: 7rem;
+    right: 5rem;
+    width: 200px;
+    max-width: 40%;
+    border-radius: 0;
+    z-index: 0;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  .button.button-primary {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+}

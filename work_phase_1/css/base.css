@@ -1,0 +1,60 @@
+/* color reference: #e8eef1 , #bfdff1, #abd7f1, #96c0f1, #6dc0f1, #43b0f1, #057dcd, #1e3d58 */
+/* text color : #d0b290 */
+
+body {
+    font-family: "Ruluko", sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem; /* 64px */
+    color: #e8eef1;   /*change color*/
+    font-weight: bold;
+    background-color: #6dc0f1
+}
+
+h2 {
+    font-size: 3rem;
+    color: brown;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+h5,h6 {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+
+p {
+    font-size: 1rem; /* 16px */
+    color: darkgreen;
+    
+}
+/* line height */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 1.5;
+}
+
+
+
+

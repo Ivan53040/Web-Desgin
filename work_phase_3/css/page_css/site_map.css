@@ -1,0 +1,15 @@
+@import url("../components/accordion.css");
+
+/* site_map.css */
+@media (min-width: 768px) {
+    .card {
+        width: calc(33.33% - 14px); /* Approximately 3 cards per row with gap considered */
+        margin-bottom: 20px; /* Add bottom margin for wrapped rows */
+    }
+}        
+
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

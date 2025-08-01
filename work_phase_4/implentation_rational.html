@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/implentation_rational.css" />
+        <link rel="stylesheet" href="css/page_css/sharing_area.css" />
+        <link rel="stylesheet" href="css/page_css/recipe_example.css" />
+        <link rel="stylesheet" href="css/page_css/homepage.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <!--NEW-->
+
+        <title>Work Phase 4 - Implementation Rationale</title>
+    </head>
+    <body>
+        <section>
+            <!-- Only one <nav> element for nav-mobile -->
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <!-- Hamburger toggle -->
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+
+                <!-- Expandable mobile menu -->
+                <div class="mobile-expandable-menu">
+                    <!-- Main menu (right side) -->
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">WP4 - Home Page</a></li>
+                            <li>
+                                <a href="implentation_rational.html"
+                                    >Implementation Rational</a
+                                >
+                            </li>
+                            <li>
+                                <a href="genai_mt_acknowledgement.html"
+                                    >GenAI MT Acknowledgement</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Only one <nav> element for nav-desktop -->
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="homepage.html">WP4 - Homepage</a>
+                        </li>
+                        <li>
+                            <a href="implentation_rational.html"
+                                >Implementation Rational</a
+                            >
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI MT Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <main>
+            
+                <h1>Implementation Rationale</h1>
+                <h2>Website Structure</h2>
+                <h3>Page implemented:</h3>
+                <p>
+                    Homepage, Culture Showcase, Recipe & Cooking, Recipe
+                    example, Healthy Living, Sharing Area, Contact Us
+                </p>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">1. Homepage</button>
+                        <div class="accordion-content">
+                            <p>
+                                - Core landing page introducing the platform and
+                                its purpose.
+                            </p>
+                            <p>
+                                - Designed to
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >feel warm, welcoming, and
+                                    community-driven.</span
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            2. Dynamic Content Page
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                - Includes Recipe Example, Sharing Area<br/>
+                                - Recipe Example Page integrates
+                                JavaScript-based
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >quick comment functionality via API</span
+                                >
+                                (postFormData.js, getData.js)
+                            </p>
+                            <p>
+                                - Only the latest 5 comments are shown
+                                dynamically.
+                            </p>
+                            <p>
+                                - Sharing Area let users share their food phots with comments
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            3. Static Content Pages
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                - Includes: Culture Showcase, Recipes & Cooking,
+                                Healthy Living, Contact Us
+                            </p>
+                            <p>
+                                - These provide
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >static cultural, health, and culinary
+                                    content</span
+                                >
+                                for users.
+                            </p>
+                        </div>
+                    </div>
+                    <h3>🔒 Why These Pages Are Static</h3>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            1. Culture Showcase
+                        </button>
+                        <div class="accordion-content">
+                            <p>- Current State: Static</p>
+                            <p>
+                                - Reason: Stories are collected from the
+                                internet and presented purely as informational
+                                content.
+                            </p>
+                            <p>- No dynamic user content is involved.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            2. Recipes & Cooking
+                        </button>
+                        <div class="accordion-content">
+                            <p>- Current State: Mostly static</p>
+                            <p>
+                                - Reason:<br />
+                                1. Recipes require extensive structured data:
+                                ingredients, steps, nutrition, video links,
+                                etc.<br />
+                                2. The API used only supports limited content,
+                                so dynamic interaction is limited to a quick
+                                comment section (see: `recipe_example.html`
+                                using `postFormData.js` and `getData.js`)<br />
+                                3. To maintain content quality, all recipe posts
+                                require
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >admin verification before publishing.</span
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            3. Healthy Living
+                        </button>
+                        <div class="accordion-content">
+                            <p>- Current State: Static</p>
+                            <p>
+                                - Reason:<br />
+                                1. Provides curated health information.<br />
+                                2. The "Latest" section is
+                                administrator-controlled to
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >avoid misinformation and ensure
+                                    credibility.</span
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Comparison with A3 Design Proposal
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                In the A3 proposal, a dedicated Forum Page was
+                                planned. However, during implementation, this
+                                was streamlined into an embedded comment section
+                                on the Recipe Example page to simplify
+                                navigation and reduce cognitive load. This
+                                decision
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >maintained user engagement</span
+                                >
+                                goals while reducing redundancy. Additionally,
+                                while A3 included a dynamic news feed for
+                                Healthy Living, API limitations meant this
+                                feature is planned for future integration using
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >verified health news APIs.</span
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <h3>🔄 Future Dynamic Updates</h3>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            1. Culture Showcase
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                - Add a story submission form where users can
+                                share their own cultural stories.
+                            </p>
+                            <p>
+                                - Stories will be
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >moderated by administrators</span
+                                >
+                                before appearing on the site.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            2. Recipes & Cooking
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                - Transform the current recipe form into a
+                                dedicated submission page.
+                            </p>
+                            <p>
+                                -
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Enable user-submitted recipes</span
+                                >
+                                via API.
+                            </p>
+                            <p>
+                                - Recipes will be reviewed and verified by
+                                admins before publication.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            3. Healthy Living
+                        </button>
+                        <div class="accordion-content">
+                            <p>- Integrate with external health news APIs.</p>
+                            <p>
+                                -
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Automatically update</span
+                                >
+                                the "Latest" section daily using content from
+                                trusted health websites.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            4. Engagement/Form Pages
+                        </button>
+                        <div class="accordion-content">
+                            <p>- Contact Us Form, Submit My Recipe Form</p>
+                            <p>
+                                - API integration supports data submission,
+                                ensuring user interaction is
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >meaningful but privacy-respecting</span
+                                >.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <section>
+                    <h2>API Integration</h2>
+                    <p>
+                        - Implement API endpoints for user-submitted recipes,
+                        ensuring seamless data flow between the frontend and
+                        backend.
+                    </p>
+                    <p>
+                        - Utilize third-party APIs for enhanced recipe
+                        recommendations and cultural insights.
+                    </p>
+                    <h2>API showcase</h2>
+                    <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Community Newspaper
+                        </button>
+                        <div class="accordion-content">
+                            <section class="newspaper-section">
+                        <h2>Community Newspaper</h2>
+                        <p>
+                            Stay updated with our latest news, stories, and
+                            cultural highlights. Join our community mailing
+                            list!
+                        </p>
+
+                        <button
+                            class="button button-primary"
+                            id="subscribe-toggle"
+                        >
+                            Subscribe Now!
+                        </button>
+
+                        <form
+                            class="subscribe-form hidden"
+                            id="community-form"
+                            aria-hidden="true"
+                            enctype="multipart/form-data"
+                        >
+                            <label for="subscriber-name">Full Name:</label>
+                            <input
+                                type="text"
+                                id="subscriber-name"
+                                name="name"
+                                required
+                            />
+
+                            <label for="subscriber-email">Email:</label>
+                            <input
+                                type="email"
+                                id="subscriber-email"
+                                name="email"
+                                required
+                            />
+
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="agree" required />
+                                I agree to receive newsletters and updates from
+                                this platform.
+                            </label>
+
+                            <button type="submit" class="button button-primary">
+                                Submit
+                            </button>
+                        </form>
+
+                        <p
+                            id="form-feedback"
+                            style="margin-top: 1rem; font-weight: bold"
+                        ></p>
+
+                        <!-- ✅ Display Community Members -->
+                        <div
+                            id="community-list"
+                            class="submitted-recipes-display"
+                        ></div>
+                    </section>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Shared Memories
+                        </button>
+                        <div class="accordion-content">
+                            <div class="sharing-gallery">
+                            <div class="photo-gallery" id="photo-gallery"></div>
+                    </div>
+                    
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            User's Comment
+                        </button>
+                        <div class="accordion-content">
+                        <section
+                        class="comments-section"
+                        aria-labelledby="user-comments"
+                    >
+                        <h2
+                            style="
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            "
+                        >
+                            User Comments
+                            <button
+                                id="toggle-comment-form"
+                                class="button button-secondary"
+                            >
+                                Add Comment
+                            </button>
+                        </h2>
+
+                        <!-- Hidden form initially -->
+                        <form
+                            id="chat-form"
+                            class="styled-form"
+                            style="display: none; margin-top: 1rem"
+                        >
+                            <label for="person_name">Name</label>
+                            <input
+                                type="text"
+                                name="person_name"
+                                id="person_name"
+                                required
+                            />
+
+                            <label for="chat_post_title">Comment</label>
+                            <textarea
+                                name="chat_post_title"
+                                id="chat_post_title"
+                                rows="3"
+                                required
+                            ></textarea>
+
+                            <label>Rating (1–5)</label>
+                            <div class="rating-stars" id="star-rating">
+                                <span data-value="1">★</span>
+                                <span data-value="2">★</span>
+                                <span data-value="3">★</span>
+                                <span data-value="4">★</span>
+                                <span data-value="5">★</span>
+                            </div>
+                            <input
+                                type="hidden"
+                                name="chat_post_content"
+                                id="chat_post_content"
+                                required
+                            />
+
+                            <button type="submit" class="button button-primary">
+                                Submit
+                            </button>
+                            <div id="form-feedback"></div>
+                        </form>
+                    </section>
+                    
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Subbmit Recipe
+                        </button>
+                        <div class="accordion-content">
+                        <section>
+                        <h1>Submitted Recipes</h1>
+                        <div
+                            id="submitted-recipes-container"
+                            class="recipe-grid"
+                        ></div>
+                    </section>
+                    </div>
+                    </div>
+                </section>
+                    
+                    
+                    
+                </section>
+
+                <section>
+                    <h2>🎯 Value, Needs, and Features Alignment</h2>
+                    <h3>
+                        Value 1: Cultivate a Diverse and Inclusive Community
+                    </h3>
+                    <p>Target Audience: General Public</p>
+                    <p>Webpage Implementation: Recipes & Cooking</p>
+                    <section class="accordion m-y-3">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                User Needs & Matching Features:
+                            </button>
+                            <div class="accordion-content">
+                                <h3>
+                                    Need 1: Users need a platform to share
+                                    recipes from different countries.
+                                </h3>
+                                <p>
+                                    - Submit My Recipe feature allows users to
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >contribute cultural recipes</span
+                                    >.
+                                </p>
+
+                                <p>
+                                    - Submitted data is reviewed and converted
+                                    into pages like the Recipe Example.
+                                </p>
+                                <p>
+                                    - Sharing Area allows user to share their food to others.
+                                </p>
+                                <h3>
+                                    Need 2: Users want to explore unique dishes
+                                    from various cultures.
+                                </h3>
+                                <p>
+                                    -
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >Three distinct recommendation</span
+                                    >
+                                    types:<br />
+                                    Recommended Recipes<br />
+                                    Newest Uploads<br />
+                                    You May Like This<br />
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <h3>
+                        Value 2: Preserve Traditional Australian Food Culture
+                    </h3>
+                    <p>Target Audience: Community Members</p>
+                    <p>Webpage Implementation: Culture Showcase</p>
+                    <section class="accordion m-y-3">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                User Needs & Matching Features:
+                            </button>
+                            <div class="accordion-content">
+                                <h3>
+                                    Need 3: Users want to share traditional
+                                    recipes and cultural food knowledge.
+                                </h3>
+                                <p>
+                                    - Culture Showcase presents
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >traditional meals and their cultural
+                                        backgrounds</span
+                                    >
+                                    (e.g. Showcase pages 1, 2, 3, 5).
+                                </p>
+
+                                <h3>
+                                    Need 4: Users want to learn more about local
+                                    farms and traditional ingredients.
+                                </h3>
+                                <p>
+                                    Culture Showcase highlights
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >farming stories and local ingredient
+                                        origins</span
+                                    >
+                                    (e.g. Showcase pages 4, 7, 10).
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <h3>Value 3: Promote a Healthy Lifestyle</h3>
+                    <p>Target Audience: General Public</p>
+                    <p>
+                        Webpage Implementation: Healthy Living, Recipe Example
+                    </p>
+                    <section class="accordion m-y-3">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                User Needs & Matching Features:
+                            </button>
+                            <div class="accordion-content">
+                                <h3>
+                                    Need 5: Users want healthy cooking ideas and
+                                    nutritional guidance.
+                                </h3>
+                                <p>
+                                    - Healthy Living includes
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >nutritious recipes, health meter
+                                        indicators</span
+                                    >, and curated health news articles.
+                                </p>
+
+                                <h3>
+                                    Need 6: Users want motivation and guidance
+                                    to cook for themselves.
+                                </h3>
+                                <p>
+                                    Recipe Example provides
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >step-by-step instructions</span
+                                    >, a complete ingredient list, and an
+                                    embedded tutorial video.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <br />
+                <h2>🎨 Visual & Interaction Design</h2>
+
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Style Guide Implementation
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                1. Uses base.css for
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >color variables</span
+                                >
+                                (var(--primary-color), etc.)
+                            </p>
+                            <p>
+                                2.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Mobile-first</span
+                                >
+                                CSS with modular structure (recipe_example.css,
+                                etc.)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Visceral Design
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                1. Color Scheme:
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Warm and cozy palette</span
+                                >
+                                (unchanged).
+                            </p>
+                            <p>
+                                2. Typography: Nunito – chosen for its
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >friendly and approachable</span
+                                >
+                                tone.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Layout</button>
+                        <div class="accordion-content">
+                            <p>
+                                1. All pages built except Forum (its
+                                functionality embedded as comment form).
+                            </p>
+                            <p>
+                                2.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Fully responsive design</span
+                                >
+                                using @media (min-width: 768px) as breakpoint.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Imagery</button>
+                        <div class="accordion-content">
+                            <p>
+                                1. Uses custom imagery from WP3 assets to
+                                maintain cultural
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >warmth and inclusivity</span
+                                >.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h2>🧠 Behavioral Design</h2>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Navigation</button>
+                        <div class="accordion-content">
+                            <p>
+                                1.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Fully implemented menu</span
+                                >
+                                (mobile + desktop).
+                            </p>
+                            <p>
+                                2.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Breadcrumbs</span
+                                >
+                                for user orientation.
+                            </p>
+                            <p>
+                                3. No complex links:
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >hover-underline</span
+                                >
+                                text used to simplify interface.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Components</button>
+                        <div class="accordion-content">
+                            <p>
+                                1. Cards: Contain title, image, rating, time,
+                                CTA button (e.g., "Cook Now").
+                            </p>
+                            <p>
+                                2. Buttons: Consistent primary and secondary
+                                styles applied site-wide.
+                            </p>
+                            <p>
+                                3. Icons: Uses emojis instead of image icons for
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >simplicity</span
+                                >.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Forms</button>
+                        <div class="accordion-content">
+                            <p>
+                                1. Forms validated and styled accessibly
+                                (styled-form in CSS).
+                            </p>
+                            <p>
+                                2. Newspaper form and comment submission are
+                                fully functional.
+                            </p>
+                            <p>
+                                3. Recipe submission form collects data but
+                                requires moderation before public display.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Summary</button>
+                        <div class="accordion-content">
+                            <p>
+                                Informal user feedback from classmates revealed
+                                that users preferred a cleaner homepage with a
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >single navigation</span
+                                >
+                                method. As a result, redundant UI was removed,
+                                and the mobile/desktop menu experience was
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >simplified for consistency</span
+                                >.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h2>🪞 Reflective Design</h2>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Value Mapping</button>
+                        <div class="accordion-content">
+                            <p>1. Cultivating Diversity & Inclusion.</p>
+                            <p>
+                                - Recipe & Cooking: Users submit global recipes.
+                            </p>
+                            <p>
+                                - Has Recommended, Newest, and You May Like This
+                                sections.
+                            </p>
+                            <p>2. Preserving Traditional Australian Culture</p>
+                            <p>
+                                - Culture Showcase: Features traditional foods
+                                (pages 1–3, 5) and local farms (pages 4, 7, 10).
+                            </p>
+                            <p>3. Promoting Healthy Lifestyles</p>
+                            <p>- Healthy Living Page:</p>
+                            <p>
+                                > Healthy recipes with nutrition labels and
+                                health score meters.
+                            </p>
+                            <p>> Articles promoting lifestyle wellness.</p>
+                            <p>- Recipe Example Page:</p>
+                            <p>
+                                > Step-by-step tutorials, nutrition info, video
+                                instructions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Empowerment, Belonging, and Wellbeing
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Empowerment: "Submit My Recipe"
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >encourages contribution</span
+                                >.
+                            </p>
+                            <p>
+                                Belonging: "Quick Comment" lets users
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >share and engage</span
+                                >.
+                            </p>
+                            <p>
+                                Wellbeing:
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Health-focused</span
+                                >
+                                content and interactive learning via video.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h2>🌐 Technical, Ethical & Accessibility Considerations</h2>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Ethics and Privacy
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                1. All user-facing forms (newsletter, comment,
+                                submit recipe) only request essential data
+                                (e.g., name and email).
+                            </p>
+                            <p>
+                                2.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >No sensitive data is collected</span
+                                >. The site avoids intrusive features like
+                                third-party tracking or data monetization.
+                            </p>
+                            <p>
+                                3. Submit Recipe requires admin verification to
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >prevent spam/junk data</span
+                                >.
+                            </p>
+                            <p>
+                                All design decisions were guided by three core
+                                ethical principles: minimizing data collection,
+                                ensuring content integrity through moderation,
+                                and maximizing user
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >safety and clarity</span
+                                >
+                                through accessible interaction.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h2>♿ Integrated Accessibilitys</h2>
+                <p>
+                    Accessibility was evaluated using IBM Equal Access Checker
+                    with a focus on the Recipe Example page and general
+                    templates. Each page was tested for contrast, semantics,
+                    keyboard navigation, and structural clarity. Feedback was
+                    iteratively addressed during styling and layout design.
+                </p>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Website-Wide Assessment — with Recipe Example Page
+                            as Main Testing Case
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                The site design and functionality were tested
+                                for accessibility using IBM Equal Access
+                                Checker, with the Recipe Example page serving as
+                                a
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >representative sample</span
+                                >.
+                            </p>
+                            <p>Key findings included:</p>
+                            <ul>
+                                <li>
+                                    Color contrast ratios met WCAG 2.1 AA
+                                    standards.
+                                </li>
+                                <li>
+                                    All interactive elements were keyboard
+                                    navigable.
+                                </li>
+                                <li>
+                                    Semantic HTML was used to enhance screen
+                                    reader compatibility.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <section class="accordion m-y-3">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                Sample Issue Detected:
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Problem: Text contrast ratio of 2.13:1 falls
+                                    short of the WCAG AA minimum contrast
+                                    requirement for
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >normal text</span
+                                    >.
+                                </p>
+                                <p>
+                                    Element in Question:
+                                    <span style="color: goldenrod"
+                                        >(★★★★☆)</span
+                                    >
+                                </p>
+                                <p>
+                                    Assessment:This is not functional or
+                                    instructional text, but a
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >symbolic star rating</span
+                                    >.
+                                </p>
+                                <p>
+                                    ✅ Conclusion: No change needed under
+                                    current WCAG interpretation.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <br />
+                <h2>🔎 Accessibility Breakdown (WCAG 2.1 AA)</h2>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Perceivable</button>
+                        <div class="accordion-content">
+                            <p>
+                                1.1.1 Non-text Content: All images include
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >meaningful alt</span
+                                >
+                                text (e.g., recipe images).
+                            </p>
+                            <p>
+                                1.2.2 Captions (Prerecorded): YouTube videos
+                                used include captions.
+                            </p>
+                            <p>
+                                1.3.1 Info & Relationships: Semantic HTML used
+                                (e.g., "table" for nutrition).
+                            </p>
+                            <p>
+                                1.4.1 Use of Color:
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Allergen icons</span
+                                >
+                                supplement color labels.
+                            </p>
+                        </div>
+                    </div>
+                    <section class="accordion m-y-3">
+                        <div class="accordion-item">
+                            <button class="accordion-header">Operable</button>
+                            <div class="accordion-content">
+                                <p>
+                                    2.1.1 Keyboard: Entire website is operable
+                                    via keyboard (Tab, Enter, Arrow keys).
+                                </p>
+                                <p>
+                                    2.2.1 Timing Adjustable: Embedded YouTube
+                                    content has native pause controls.
+                                </p>
+                                <p>
+                                    2.3.1 Flash Threshold: No animations exceed
+                                    3 flashes/second.
+                                </p>
+                                <p>
+                                    2.4.2 Page Titled: Every page includes clear
+                                    "title".
+                                </p>
+                                <p>
+                                    2.4.4 Link Purpose (In Context): All buttons
+                                    have
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >descriptive labels</span
+                                    >
+                                    (e.g., “View Recipe” not “Check Out now”).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                Understandable
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    3.1.1 Language of Page: (html lang="en") set
+                                    on every page.
+                                </p>
+                                <p>
+                                    3.1.2 Language of Parts:
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >Non-English terms</span
+                                    >
+                                    like かつ丼 are marked with lang="ja".
+                                </p>
+                                <p>
+                                    3.2.1 On Focus: No unexpected content
+                                    changes; form expansions are
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >predictable</span
+                                    >.
+                                </p>
+                                <p>
+                                    3.2.3 Consistent Navigation: Menus are
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >consistent</span
+                                    >
+                                    across the site.
+                                </p>
+                                <p>
+                                    3.2.5 Consistent Terminology: Ingredient
+                                    names and headings are
+                                    <span
+                                        style="
+                                            font-weight: bold;
+                                            background-color: yellow;
+                                        "
+                                        >reused</span
+                                    >
+                                    consistently.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <br />
+
+                <h2>Summary</h2>
+                <p>
+                    This implementation reflects an intentional synthesis of
+                    design integrity, ethical development, and technical
+                    execution. Every decision — from visual structure to
+                    interactive components — was guided by
+                    <span style="font-weight: bold; background-color: yellow"
+                        >user needs, CCI’s core values, and accessibility</span
+                    >
+                    best practices. Challenges such as API limitations and
+                    accessibility compliance were addressed through iterative
+                    refinement and thoughtful prioritization. The project not
+                    only fulfilled the vision of the A3 proposal but expanded
+                    upon it with professional reasoning, future-proof planning,
+                    and
+                    <span style="font-weight: bold; background-color: yellow"
+                        >actionable insights</span
+                    >. These experiences lay a strong foundation for my
+                    continued growth as a responsible and effective digital
+                    designer.
+                </p>
+            
+        </main>
+
+        <!--END PAGE STRUCTURE-->
+        <script type="module" src="js/implentation_rational.js"></script>
+        <script type="module" src="js/recipe_example.js"></script>
+        <script type="module" src="js/recipes&cooking.js"></script>
+        <script type="module" src="js/modules/submitted_recipes.js"></script>
+        <script type="module" src="js/sharing_area.js"></script>
+    </body>
+</html>

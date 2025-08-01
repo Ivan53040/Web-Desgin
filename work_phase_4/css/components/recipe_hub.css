@@ -1,0 +1,322 @@
+/* =============================
+   Recipe Hub Wrapper (Mobile First)
+============================= */
+.recipe-hub-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Left (Main Content) and Right (Submit Column) */
+.recommended-column {
+    flex: 3;
+}
+
+.submit-column {
+    flex: 1;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+.submit-column .submit-text {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    color: var(--text-color);
+}
+
+.recipe-section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.submit-button {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    width: 30vw;
+    border-radius: 2rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* =============================
+   Recipe Card Layout
+============================= */
+.recipe-card-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    flex: 1;
+    min-height: 480px;
+    overflow: hidden;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.recipe-meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.description {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.stars {
+    font-size: 1.1rem;
+    color: gold;
+    white-space: nowrap;
+}
+
+.cook-time {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    white-space: nowrap;
+    text-align: right;
+}
+
+/* =============================
+   Newest Uploads Grid
+============================= */
+.upload-hub-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.upload-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.upload-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.upload-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.upload-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.upload-text h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.upload-text p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.upload-info .button {
+    align-self: flex-start;
+}
+
+/* =============================
+   You May Like This Rotator
+============================= */
+.you-may-like-column {
+    text-align: center;
+}
+
+.image-rotator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.image-rotator img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* =============================
+   Search Bar Styles
+============================= */
+.recipe-search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.recipe-search-bar .search-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.recipe-search-bar .search-input,
+.recipe-search-bar .search-type {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+    font-family: inherit;
+}
+
+.recipe-search-bar .search-input {
+    flex: 2;
+    max-width: 300px;
+}
+
+.recipe-search-bar .search-type {
+    flex: 1;
+    max-width: 140px;
+}
+
+.recipe-search-bar .button-secondary {
+    padding: 0.6rem 1rem;
+}
+
+/* =============================
+   General Button Rules
+============================= */
+.button {
+    width: 120px;
+}
+
+/* =============================
+   Responsive — Tablet & Desktop
+============================= */
+@media (min-width: 768px) {
+    .recipe-hub-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-right: 5px;
+    }
+
+    .submit-column {
+        margin-top: 10vh;
+        min-width: 20vw;
+    }
+
+    .submit-button {
+        font-size: 1.2rem;
+        padding: 0.75rem 1.5rem;
+        width: 10vw;
+    }
+
+    .recommended-column {
+        min-width: 70vw;
+    }
+
+    .recipe-section-title {
+        text-align: left;
+        margin-left: 2vw;
+        font-size: 3rem;
+    }
+
+    .button-secondary {
+        font-size: 1.5rem;
+        width: 7rem;
+    }
+}
+
+/* =============================
+   Responsive — Mobile Refinement
+============================= */
+@media (max-width: 768px) {
+    .recipe-search-bar {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .recipe-search-bar .search-input,
+    .recipe-search-bar .search-type,
+    .recipe-search-bar {
+        width: 100%;
+    }
+
+    .button-secondary,
+    .button-primary {
+        width: 70%;
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .recipe-meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .stars,
+    .cook-time {
+        text-align: left;
+        width: 100%;
+    }
+}

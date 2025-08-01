@@ -1,0 +1,125 @@
+@import url("components/value-box.css");
+@import url("components/flip-card.css");
+@import url("components/responsive_menus.css");
+@import url("components/card.css");
+@import url("components/card-container.css");
+@import url("components/breadcrumbs.css");
+@import url("components/button.css");
+@import url("components/accordion.css");
+
+.js-animate-sequence {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(
+        20px
+    ); /* Optional: for a slight slide-in from bottom */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.js-animate-sequence.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Form container */
+#community-form {
+    max-width: 100%; /* Allow the form to scale within its container */
+    width: 600px; /* Set a fixed width for larger screens */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Close button */
+#community-form button[aria-label="Close Form"] {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    float: right;
+    margin-top: -10px;
+    margin-right: -10px;
+    transition: color 0.3s ease;
+}
+
+#community-form button[aria-label="Close Form"]:hover {
+    color: var(--secondary-color);
+}
+
+/* Form labels */
+#community-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Form inputs */
+#community-form input[type="text"],
+#community-form input[type="email"],
+#community-form textarea,
+#community-form input[type="file"] {
+    width: 100%; /* Ensure inputs span the full width of the form */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+#community-form input[type="text"]:focus,
+#community-form input[type="email"]:focus,
+#community-form textarea:focus,
+#community-form input[type="file"]:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px var(--accent-color);
+    outline: none;
+}
+
+/* Textarea */
+#community-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit button */
+#community-form button[type="submit"] {
+    display: block;
+    width: 100%; /* Make the button span the full width of the form */
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#community-form button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+#community-form button[type="submit"]:active {
+    transform: translateY(2px);
+}
+
+/* Feedback message */
+#form-feedback {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--accent-color);
+    text-align: center;
+}

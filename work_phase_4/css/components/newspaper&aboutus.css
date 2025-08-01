@@ -1,0 +1,204 @@
+/* ================================
+   Newspaper & About Us Sections (Mobile First)
+================================= */
+.newspaper-section,
+.aboutus-section {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    color: #170300;
+}
+
+/* ================================
+   Headings
+================================= */
+.newspaper-section h2,
+.aboutus-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #6b331e;
+    margin-bottom: 1rem;
+}
+
+/* ================================
+   Paragraphs
+================================= */
+.newspaper-section p,
+.aboutus-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ================================
+   Subscribe Form
+================================= */
+.subscribe-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.subscribe-form input[type="text"],
+.subscribe-form input[type="email"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.subscribe-form .checkbox-label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* Toggle Button Centered */
+.newspaper-section button#subscribe-toggle {
+    display: block;
+    margin: 1rem auto;
+}
+
+/* ================================
+   About Us Icon Grid (Mobile First)
+================================= */
+.about-icons-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.about-icons-grid img {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.about-icons-grid h3 {
+    font-size: 1.4rem;
+    color: #6b331e;
+    margin-bottom: 0.5rem;
+}
+
+.about-icons-grid p {
+    font-size: 1rem;
+    color: #170300;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* Generic Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Info wrapper stretch base */
+.info-sections-wrapper {
+    align-items: stretch;
+}
+
+/* ================================
+   Desktop Enhancements
+================================= */
+@media (min-width: 768px) {
+    .newspaper-section,
+    .aboutus-section {
+        display: block;
+        padding: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .newspaper-section {
+        margin-top: 4rem;
+    }
+
+    .aboutus-section h2,
+    .newspaper-section h2 {
+        font-size: 3.5rem;
+        text-align: left;
+    }
+
+    .subscribe-form {
+        max-width: 500px;
+    }
+
+    .about-icons-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info-sections-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+    }
+
+    .aboutus-section,
+    .newspaper-section {
+        flex: 1;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .aboutus-section {
+        order: 1;
+    }
+
+    .newspaper-section {
+        order: 2;
+    }
+
+    .subscribe-form {
+        max-width: 100%;
+    }
+}
+
+.calendar-wrapper {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f5f0;
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    width: 100%; /* Full width of its parent */
+}
+
+.calendar-wrapper h3 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.calendar-filter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#calendar {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+#calendar {
+    max-width: 100%;
+    min-height: 500px;
+    font-size: 0.95rem;
+}

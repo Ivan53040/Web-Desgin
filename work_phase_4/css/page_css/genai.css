@@ -1,0 +1,183 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accordion-item {
+    border-radius: 8px;
+    overflow: hidden;
+    /* Removed transition: all 0.3s ease; from item to avoid conflicts */
+}
+
+.accordion-header {
+    padding: 1rem;
+    font-weight: bold;
+    font-family: Nunito, sans-serif;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transition: background-color 0.3s ease; /* Add transition for header background */
+}
+
+.accordion-header:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color) 90%,
+        transparent
+    ); /* Darken slightly on hover */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    background: white;
+}
+
+.accordion-header::before {
+    content: "▷ ";
+    display: inline-block; /* Ensure the pseudo-element is treated as a block */
+    transition: transform 0.3s ease; /* Add transition for the arrow */
+}
+
+.accordion-header.active::before {
+    content: "▶ ";
+    transform: rotate(90deg); /* Rotate the arrow when active */
+}
+
+.accordion-item.open .accordion-content {
+    padding: 1rem;
+    /* Increased max-height to be more generous */
+    max-height: 2000px; /* Use a large fixed value, 100vh can be tricky with nested */
+}
+
+/* Nested Accordion Styles (Level 2) */
+.accordion.nested {
+    margin-top: 1rem; /* Add some space above nested accordion */
+    margin-left: 1rem;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+}
+
+.accordion.nested .accordion-item {
+    border-radius: 0; /* Remove border-radius for nested items */
+    overflow: hidden;
+    /* Removed transition: all 0.3s ease; from nested item */
+}
+
+.accordion.nested .accordion-header {
+    background-color: color-mix(in srgb, var(--primary-color) 20%, transparent);
+    color: var(--primary-color);
+    border: 1px solid var(--accent1-color);
+    border-radius: 10px 10px 0 0;
+    margin: 5px 0; /* Adjust margin for nested headers */
+}
+
+.accordion.nested .accordion-header:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color) 30%,
+        transparent
+    ); /* Darken slightly on hover */
+}
+
+.accordion.nested .accordion-content {
+    /* Ensure max-height is 0 and overflow is hidden by default */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    color: var(--accent1-color);
+    border: 1px solid var(--accent1-color);
+    border-top: none; /* Remove top border to connect with header */
+    border-radius: 0 0 10px 10px;
+    margin: 0 5px 5px 5px; /* Adjust margin to align with header */
+}
+
+.accordion.nested .accordion-item.open .accordion-content {
+    /* Use a large fixed value for nested open state */
+    max-height: 800px; /* Adjust as needed for nested content */
+    padding: 1rem;
+}
+
+/* Nested Accordion Styles (Level 3 - inside a nested accordion) */
+.accordion.nested .accordion.nested {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border-left: 3px solid var(--secondary-color); /* Different border color */
+    padding-left: 1rem;
+}
+
+.accordion.nested .accordion.nested .accordion-item {
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.accordion.nested .accordion.nested .accordion-header {
+    background-color: color-mix(
+        in srgb,
+        var(--secondary-color) 20%,
+        transparent
+    ); /* Different background color */
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color); /* Different border color */
+    border-radius: 10px 10px 0 0;
+    margin: 5px 0;
+}
+
+.accordion.nested .accordion.nested .accordion-header:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--secondary-color) 30%,
+        transparent
+    ); /* Darken slightly on hover */
+}
+
+.accordion.nested .accordion.nested .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    color: var(--secondary-color); /* Different text color */
+    border: 1px solid var(--secondary-color); /* Different border color */
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    margin: 0 5px 5px 5px;
+}
+
+.accordion.nested .accordion.nested .accordion-item.open .accordion-content {
+    max-height: 1000px; /* Adjust as needed for third level content */
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion-header {
+        font-size: 1rem;
+    }
+    .accordion-content {
+        font-size: 0.9rem;
+    }
+}
+
+.container {
+    min-height: 100vh;
+    width: 90vw;
+    margin: 0 auto;
+    background-color:var(--background-color);
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    padding: 2rem; /* includes spacing for inner content */
+}          
+
+/* Larger screens(e.g., tablets or desktops) */
+@media (min-width: 768px) {
+    .container {
+        width: 70vw;
+        padding-bottom: 40px;
+    }
+}

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/genai.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <!--NEW-->
+
+        <title>Work Phase 4 - Genai MT Acknowledgement</title>
+    </head>
+    <body>
+        <section>
+            <!-- Only one <nav> element for nav-mobile -->
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <!-- Hamburger toggle -->
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+
+                <!-- Expandable mobile menu -->
+                <div class="mobile-expandable-menu">
+                    <!-- Main menu (right side) -->
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">WP4 - Home Page</a></li>
+                            <li>
+                                <a href="implentation_rational.html"
+                                    >Implementation Rational</a
+                                >
+                            </li>
+                            <li>
+                                <a href="genai_mt_acknowledgement.html"
+                                    >GenAI MT Acknowledgement</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Only one <nav> element for nav-desktop -->
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="homepage.html">WP4 - Homepage</a>
+                        </li>
+                        <li>
+                            <a href="implentation_rational.html"
+                                >Implementation Rational</a
+                            >
+                        </li>
+                        <li>
+                            <a href="genai_mt_acknowledgement.html"
+                                >GenAI MT Acknowledgement</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <main>
+            <div class="container">
+                <h1>GenAI Mt Acknowledgement</h1>
+                <h2>Overview</h2>
+
+                <p>
+                    Throughout the design and development of the "Recipe
+                    Explorer" website, I actively integrated Generative AI
+                    (GenAI) tools such as ChatGPT and selectively applied
+                    Machine Translation (MT) tools when testing multilingual
+                    phrases (e.g., marking non-English food names using lang
+                    attributes). This section details how these tools enhanced
+                    productivity, creativity, and technical implementation —
+                    while critically reflecting on limitations, ethical
+                    safeguards, and future professional applications.
+                </p>
+
+                <h2>⚙️ Strategic Use of GenAI in Implementation</h2>
+                <h3>1. Technical Implementation Support</h3>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            CSS Design and Refactoring:
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                GenAI was used to
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >modularize monolithic CSS</span
+                                >
+                                files into mobile-first, component-based styles
+                                (e.g., newspaper&aboutus.css). It helped
+                                generate:
+                            </p>
+                            <p>
+                                1.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Responsive layout</span
+                                >
+                                using @media (min-width: 768px)
+                            </p>
+                            <p>
+                                2.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Reusable</span
+                                >
+                                style patterns (e.g., .subscribe-form,
+                                .about-icons-grid)
+                            </p>
+                            <p>
+                                3.
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Visual consistency</span
+                                >
+                                across pages using existing var(--color) tokens
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            JavaScript Modularity:
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                GenAI guided the conversion of JavaScript logic
+                                into ES6 modules:
+                            </p>
+                            <p>
+                                1. Created postFormData.js and getData.js for
+                                comment and
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >form API</span
+                                >
+                                interactions.
+                            </p>
+                            <p>
+                                2. Helped
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >modularize mobile and desktop menu</span
+                                >
+                                toggles with reusable functions and event
+                                listeners.
+                            </p>
+                            <p>
+                                3. Enhanced interactivity with
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >scalable carousel/slider</span
+                                >
+                                logic in the Showcase section.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h3>2. Content Authoring and Enhancement</h3>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            UI/UX Copy Refinement:
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                I used GenAI to draft and simplify instructional
+                                text on forms and buttons, such as:
+                            </p>
+                            <p>Checkbox labels for privacy consent</p>
+                            <p>Error-free placeholder text for input fields</p>
+                            <p>Mobile-friendly form descriptions</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            HTML Semantics:
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                GenAI helped
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >optimize</span
+                                >
+                                the semantic use of "section", "nav", and "main"
+                                elements, ensuring the site met accessibility
+                                and SEO best practices.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h3>3. Accessibility Testing and Interpretation</h3>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Usage:</button>
+                        <div class="accordion-content">
+                            <p>
+                                I used GenAI to interpret WCAG 2.1 AA principles
+                                when IBM Equal Access Checker flagged a
+                                low-contrast warning (2.13:1).
+                            </p>
+                            <p>
+                                GenAI helped me
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >differentiate</span
+                                >
+                                between decorative vs. functional text,
+                                confirming that the symbolic star rating didn’t
+                                require correction — a nuance I wasn’t initially
+                                aware of.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h3>AI Prompt example</h3>
+                <h3>Showcase section</h3>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Prompt</button>
+                        <div class="accordion-content">
+                            <p>
+                                Help me build a responsive CSS module for a
+                                showcase section that displays 3 cards per page
+                                and has left/right arrows to scroll. Use
+                                mobile-first design and follow my style guide
+                                using CSS modules and variables like
+                                --primary-color. Then give me JavaScript (as ES
+                                module) to handle scrolling.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">AI Response</button>
+                        <div class="accordion-content">
+                            <p>
+                                /* ================================ Showcase
+                                Section (Mobile First)
+                                ================================= */<br />
+                                .showcase-section {<br />
+                                padding: 2rem 1rem;<br />
+                                background-color: var(--background-color);<br />
+                                color: var(--text-color);<br />
+                                text-align: center;<br />
+                                }<br />
+                                <br />
+                                .showcase-container {<br />
+                                display: flex;<br />
+                                align-items: center;<br />
+                                overflow: hidden;<br />
+                                position: relative;<br />
+                                }<br />
+                                <br />
+                                .showcase-track {<br />
+                                display: flex;<br />
+                                gap: 1rem;<br />
+                                transition: transform 0.3s ease-in-out;<br />
+                                }
+                                <br />
+                                .showcase-card {<br />
+                                flex: 0 0 80%;<br />
+                                max-width: 80%;<br />
+                                background-color: #fff;<br />
+                                border-radius: 1rem;<br />
+                                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);<br />
+                                overflow: hidden;<br />
+                                text-align: center;<br />
+                                }
+                                <br />
+                                /* Arrows */<br />
+                                .arrow {<br />
+                                font-size: 2rem;<br />
+                                background: none;<br />
+                                border: none;<br />
+                                cursor: pointer;<br />
+                                padding: 0.5rem;<br />
+                                }<br />
+                                <br />
+                                /* Desktop enhancement */<br />
+                                @media (min-width: 768px) {<br />
+                                .showcase-card {<br />
+                                flex: 0 0 30%;<br />
+                                max-width: 30%;<br />
+                                }<br />
+                                }<br />
+                                <br />
+                                // showcaseSlider.js<br />
+                                export function initShowcaseSlider() {<br />
+                                const track =
+                                document.querySelector(".showcase-track");<br />
+                                const leftBtn =
+                                document.querySelector(".arrow.left");<br />
+                                const rightBtn =
+                                document.querySelector(".arrow.right");<br />
+                                <br />
+                                let scrollIndex = 0;<br />
+                                <br />
+                                rightBtn.addEventListener("click", () => {<br />
+                                const cards = track.children.length;<br />
+                                if (scrollIndex < cards - 3) scrollIndex++;<br />
+                                track.style.transform =
+                                `translateX(-${scrollIndex * 33.33}%)`;<br />
+                                });
+                                <br />
+                                leftBtn.addEventListener("click", () => {<br />
+                                if (scrollIndex > 0) scrollIndex--;<br />
+                                track.style.transform =
+                                `translateX(-${scrollIndex * 33.33}%)`;<br />
+                                });<br />
+                                }<br />
+                                <br />
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <h3>You May Like This section</h3>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Prompt</button>
+                        <div class="accordion-content">
+                            <p>
+                                Create a responsive ‘You May Like This’ section
+                                with a horizontal scroll or image rotator
+                                layout. Each item includes an image and title.
+                                It should be mobile-first, styled using CSS
+                                modules, and support smooth transitions. Use
+                                variables like var(--primary-color) and make the
+                                layout match a cozy cultural recipe platform.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">AI Response</button>
+                        <div class="accordion-content">
+                            <p>
+                                /* ================================ You May Like
+                                This Section =================================
+                                */<br />
+                                .you-may-like-section {<br />
+                                margin: 2rem 1rem;<br />
+                                text-align: center;<br />
+                                }<br />
+                                <br />
+                                .you-may-like-title {<br />
+                                font-size: 2rem;<br />
+                                margin-bottom: 1rem;<br />
+                                color: var(--primary-color);<br />
+                                }<br />
+                                <br />
+                                .you-may-like-track {<br />
+                                display: flex;<br />
+                                overflow-x: auto;<br />
+                                gap: 1rem;<br />
+                                scroll-behavior: smooth;<br />
+                                padding: 0.5rem;<br />
+                                }<br />
+                                <br />
+                                .you-may-like-card {<br />
+                                min-width: 180px;<br />
+                                background-color: #fff;<br />
+                                border-radius: 1rem;<br />
+                                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);<br />
+                                text-align: center;<br />
+                                flex-shrink: 0;<br />
+                                transition: transform 0.3s;<br />
+                                }<br />
+                                <br />
+                                .you-may-like-card img {<br />
+                                width: 100%;<br />
+                                height: 140px;<br />
+                                object-fit: cover;<br />
+                                border-radius: 1rem 1rem 0 0;<br />
+                                }<br />
+                                <br />
+                                .you-may-like-card p {<br />
+                                font-size: 1rem;<br />
+                                padding: 0.5rem;<br />
+                                color: var(--text-color);<br />
+                                }<br />
+                                <br />
+                                .you-may-like-card:hover {<br />
+                                transform: translateY(-4px);<br />
+                                }<br />
+                                <br />
+                                /* Desktop view */<br />
+                                @media (min-width: 768px) {<br />
+                                .you-may-like-track {<br />
+                                justify-content: center;<br />
+                                }<br />
+                                .you-may-like-card {<br />
+                                min-width: 220px;<br />
+                                }<br />
+                                }<br />
+                                <br />
+                                // youMayLikeScroll.js<br />
+                                export function initYouMayLikeAutoScroll() {<br />
+                                const track =
+                                document.querySelector(".you-may-like-track");<br />
+                                let scrollAmount = 0;<br />
+                                <br />
+                                setInterval(() => {<br />
+                                scrollAmount += 220; // or card width<br />
+                                if (scrollAmount >= track.scrollWidth -
+                                track.clientWidth) {<br />
+                                scrollAmount = 0;<br />
+                                }<br />
+                                track.scrollTo({ left: scrollAmount, behavior:
+                                "smooth" });<br />
+                                }, 4000);<br />
+                                }<br />
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <h3>🧠 Critical Evaluation of AI-Assisted Design</h3>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Productivity Gains
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Significantly
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >reduced time spent debugging</span
+                                >
+                                layout issues.
+                            </p>
+                            <p>
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Improved consistency</span
+                                >
+                                in form behavior and styling across multiple
+                                pages.
+                            </p>
+                            <p>
+                                Allowed me to focus more time on
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >creative aspects</span
+                                >(e.g., designing "Showcase", "Newest Uploads",
+                                and "You May Like This" layout variations).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Creativity Enhancement
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Brainstormed
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >alternative UI patterns and interaction
+                                    ideas</span
+                                >
+                                (e.g., healthy meter circle visual,
+                                hover-underline effects).
+                            </p>
+                            <p>
+                                Provided
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >prompt feedback</span
+                                >
+                                when exploring how to structure recipe cards and
+                                transition from mockups to working HTML/CSS.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            ⚠️ Limitations and Challenges
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                GenAI occasionally provided incomplete or
+                                outdated code patterns, such as:
+                            </p>
+                            <p>
+                                - Missing aria-labels or
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >unnecessary inline</span
+                                >
+                                event handlers.
+                            </p>
+                            <p>
+                                - Overly
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >generic layouts</span
+                                >
+                                that ignored the project’s color palette or
+                                spacing scheme.
+                            </p>
+                            <p>
+                                Required
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >manual alignment with design tokens</span
+                                >
+                                (e.g., -primary-color) and removal of
+                                conflicting CSS declarations.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            ⚠️ Academic Integrity and Ethical Use
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                All generated content was
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >reviewed, revised, and customized</span
+                                >
+                                to suit the actual project context.
+                            </p>
+                            <p>
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >No direct copy-paste</span
+                                >
+                                from AI-generated code; instead, I used it as a
+                                scaffold to test and refine my own
+                                implementation.
+                            </p>
+                            <p>
+                                MT tools were used strictly for language
+                                labeling and basic comprehension, not for bulk
+                                translation or content generation.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h2>📈 Future Plans for Professional GenAI/MT Use</h2>
+                <section class="accordion m-y-3">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            🔧 Technical Practices
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Use GenAI as a
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >creative and debugging assistant</span
+                                >, not as a code replacement.
+                            </p>
+                            <p>
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Cross-check</span
+                                >
+                                AI recommendations with official documentation
+                                and community best practices, especially in
+                                accessibility and security domains.
+                            </p>
+                            <p>
+                                Develop custom
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >prompt templates</span
+                                >
+                                for tasks such as generating WCAG summaries,
+                                scaffolding semantic HTML, or producing visual
+                                design alternatives.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            🌐 Communication and Collaboration
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                Leverage GenAI in
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >collaborative settings</span
+                                >
+                                for documentation, UI/UX ideation, and client
+                                proposal drafting.
+                            </p>
+                            <p>
+                                Use MT tools to test multilingual support and
+                                communicate basic cultural cues when
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >designing inclusive web interfaces</span
+                                >.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            🧭 Ethical Guardrails
+                        </button>
+                        <div class="accordion-content">
+                            <p>
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >Maintain transparency</span
+                                >
+                                in all GenAI-influenced work.
+                            </p>
+                            <p>
+                                Respect
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >authorship and originality</span
+                                >
+                                in team environments.
+                            </p>
+                            <p>
+                                Continue building awareness of
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        background-color: yellow;
+                                    "
+                                    >biases or hallucinations</span
+                                >
+                                in GenAI outputs and use domain knowledge to
+                                verify facts and correctness.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <br />
+                <h3>🎯 Final Reflection</h3>
+                <p>
+                    GenAI and MT tools were instrumental in enhancing both the
+                    <span style="font-weight: bold; background-color: yellow"
+                        >technical and creative</span
+                    >
+                    dimensions of my website project. They enabled rapid
+                    prototyping, improved code structure, and supported my
+                    learning process without compromising academic integrity.
+                    However, their use also reinforced the need for
+                    <span style="font-weight: bold; background-color: yellow"
+                        >critical evaluation, manual testing, and thoughtful
+                        application
+                    </span>
+                    in professional practice. Moving forward, I see these tools
+                    not as shortcuts, but as intelligent collaborators — ones
+                    that must be guided by
+                    <span style="font-weight: bold; background-color: yellow"
+                        >ethical design values, user-centered thinking, and
+                        responsible engineering judgment</span
+                    >.
+                </p>
+            </div>
+        </main>
+
+        <script type="module" src="js/genai_mt_acknowdge.js"></script>
+        <!--END PAGE STRUCTURE-->
+    </body>
+</html>

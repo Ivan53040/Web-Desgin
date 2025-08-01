@@ -1,0 +1,32 @@
+/* ========== Breadcrumb Navigation Styles ========== */
+
+/* Main breadcrumb container */
+.breadcrumbs {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0 1rem 50px;
+}
+
+/* Breadcrumb links */
+.breadcrumbs a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Current page label */
+.breadcrumbs span {
+  color: var(--secondary-color);
+}
+
+/* ========== Responsive Rules ========== */
+
+/* Hide breadcrumbs on small screens */
+@media (max-width: 768px) {
+  .breadcrumbs {
+    display: none;
+  }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/culture_showcase.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <title>Work Phase 4 - Culture Showcase</title>
+    </head>
+    <body>
+        <section>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="homepage.html">Homepage</a> &gt;
+                <span>Culture Showcase</span>
+            </nav>
+
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+                <div class="mobile-expandable-menu">
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">Home Page</a></li>
+                            <li>
+                                <a href="culture_showcase.html"
+                                    >Culture Showcase</a
+                                >
+                            </li>
+                            <li>
+                                <a href="recipes&cooking.html"
+                                    >Recipes & Cooking</a
+                                >
+                            </li>
+                            <li>
+                                <a href="healthy_living.html">Healthy Living</a>
+                            </li>
+                            <li>
+                                <a href="sharing_area.html">Sharing Area</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="culture_showcase.html">Culture Showcase</a>
+                        </li>
+                        <li>
+                            <a href="recipes&cooking.html"
+                                >Recipes and Cooking</a
+                            >
+                        </li>
+                        <li>
+                            <a href="healthy_living.html">Healthy Living</a>
+                        </li>
+                        <li><a href="sharing_area.html">Sharing Area</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="wp4-search-container">
+                        <div class="search-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                class="wp4-search-input"
+                                aria-label="Search"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <main aria-label="Main Content">
+            <section
+                class="cultureshowcase-section"
+                aria-labelledby="slider-section-title"
+            >
+                <h2 id="slider-section-title" class="visually-hidden">
+                    Showcase Slider
+                </h2>
+                <div class="cultureshowcase-grid">
+                    <img
+                        src="assets/images/cultureshowcase/s1_1.png"
+                        alt="Main"
+                        class="img-main"
+                    />
+                    <div class="cultureshowcase-desc">
+                        <br/>
+                        <h2></h2>
+                        <p id="cultureshowcase-desc"></p>
+                        <br/>
+                        <a
+                            id="learn-more-button"
+                            class="button button-primary"
+                            href="#"
+                            target="_blank"
+                            style="display: none"
+                        >
+                            Link to Learn More
+                        </a>
+                    </div>
+                    <img
+                        src="assets/images/cultureshowcase/s1_2.png"
+                        alt="Wide"
+                        class="img-left"
+                    />
+                    <img
+                        src="assets/images/cultureshowcase/s1_3.png"
+                        alt="Tall"
+                        class="img-right"
+                    />
+                </div>
+
+                <div class="cultureshowcase-navigation" aria-label="Pagination">
+                    <div class="page-buttons">
+                        <button
+                            class="arrow"
+                            id="cultureshowcase-prev"
+                            aria-label="Previous Page"
+                        >
+                            ←
+                        </button>
+                        <div
+                            id="cultureshowcase-pages"
+                            role="navigation"
+                            aria-label="Page Numbers"
+                        ></div>
+                        <button
+                            class="arrow"
+                            id="cultureshowcase-next"
+                            aria-label="Next Page"
+                        >
+                            →
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="gallery-section"
+                aria-labelledby="gallery-section-title"
+            >
+                <h3 id="gallery-section-title" class="section-title">
+                    Explore More Showcases
+                </h3>
+                <div class="gallery-grid" id="gallery-grid"></div>
+            </section>
+
+            <!-- Modal Viewer -->
+            <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+                <div class="modal-content">
+                    <button
+                        class="modal-close"
+                        id="modal-close"
+                        aria-label="Close preview"
+                    >
+                        ✖
+                    </button>
+                    <h3 id="modal-title"></h3>
+                    <div class="modal-images">
+                        <img id="modal-img1" alt="Main" />
+                        <img id="modal-img2" alt="Left" />
+                        <img id="modal-img3" alt="Right" />
+                    </div>
+                    <p id="modal-desc"></p>
+                    <a
+                        id="modal-jump"
+                        class="button"
+                        href="culture_showcase.html"
+                        >View in Slider</a
+                    >
+                </div>
+                <div class="gallery-controls">
+                    <button class="button" id="show-more">Show More</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- JavaScript Modules -->
+        <script type="module" src="js/modules/gallery.js"></script>
+        <script type="module" src="js/modules/cultureshowcase.js"></script>
+        <script type="module" src="js/culture_showcase.js"></script>
+    </body>
+</html>

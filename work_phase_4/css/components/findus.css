@@ -1,0 +1,95 @@
+/* ================================
+   Find Us Section (Mobile First)
+================================= */
+.find-us-section {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+/* ================================
+   Heading
+================================= */
+.find-us-section h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+/* ================================
+   Social Icon Marquee
+================================= */
+.social-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.social-track {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: max-content;
+    animation: scroll-left 18s linear infinite;
+}
+
+.social-track a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-track img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.social-track a:hover img {
+    transform: scale(1.2);
+}
+
+/* ================================
+   Animation
+================================= */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ================================
+   Desktop Layout Enhancements
+================================= */
+@media (min-width: 768px) {
+    .find-us-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .find-us-section h2 {
+        font-size: 3.5rem;
+        flex: 0 0 auto;
+        margin: 0;
+        padding-right: 1.5rem;
+        padding-left: 5rem;
+    }
+
+    .social-marquee {
+        flex: 1;
+    }
+
+    .social-track img {
+        width: 80px;
+        height: 80px;
+    }
+}

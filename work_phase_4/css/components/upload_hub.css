@@ -1,0 +1,152 @@
+/* =============================
+   Upload Hub Wrapper (Mobile First)
+============================= */
+.upload-hub-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* =============================
+   Column Layouts
+============================= */
+.newest-column {
+    flex: 3;
+}
+
+.you-may-like-column {
+    flex: 1;
+    background-color: var(--background-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* =============================
+   Upload Grid
+============================= */
+.upload-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Upload Card */
+.upload-card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.upload-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.upload-info {
+    padding: 1rem;
+}
+
+.upload-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.upload-info p {
+    color: var(--text-color);
+}
+
+/* =============================
+   You May Like – Image Rotator
+============================= */
+.image-rotator {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.image-rotator img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    top: 0;
+    left: 0;
+    transition: top 0.5s ease;
+    z-index: 1;
+}
+
+.image-rotator img.slide-out {
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.image-rotator img.slide-in {
+    transform: translateY(100%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* =============================
+   Upload Flex Row Layout
+============================= */
+.upload-flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.upload-text {
+    flex: 1;
+}
+
+.upload-button {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    align-self: start;
+}
+
+/* =============================
+   Desktop Enhancements
+============================= */
+@media (min-width: 768px) {
+    .upload-hub-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 5rem;
+    }
+
+    .upload-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .you-may-like-column {
+        max-width: 300px;
+        margin-left: 2rem;
+    }
+
+    .image-rotator img {
+        max-height: 280px;
+    }
+}

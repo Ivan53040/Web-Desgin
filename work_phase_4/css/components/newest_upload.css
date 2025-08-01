@@ -1,0 +1,64 @@
+/* ================================
+   Newest Upload Section (Mobile First)
+================================= */
+.newest-upload-section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* ================================
+   Upload Grid (1 column mobile)
+================================= */
+.upload-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* ================================
+   Upload Card
+================================= */
+.upload-card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.upload-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ================================
+   Card Content Info
+================================= */
+.upload-info {
+    padding: 1rem;
+}
+
+.upload-info h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.upload-info p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+/* ================================
+   Desktop Layout Enhancements
+================================= */
+@media (min-width: 768px) {
+    .upload-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .upload-card img {
+        height: 180px;
+    }
+}

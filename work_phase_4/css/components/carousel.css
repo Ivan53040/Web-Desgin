@@ -1,0 +1,64 @@
+/* ================================
+   Carousel Container
+================================= */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ================================
+   Carousel Track (Wrapper for Slides)
+================================= */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ================================
+   Individual Slide
+================================= */
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+/* ================================
+   Navigation Arrows
+================================= */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+/* ================================
+   Desktop Enhancements
+================================= */
+@media (min-width: 768px) {
+  .carousel-slide img {
+    border-radius: 2rem;
+  }
+}

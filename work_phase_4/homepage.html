@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/homepage.css" />
+        <!-- FullCalendar CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <!--NEW-->
+
+        <title>Work Phase 4 - Homepage</title>
+    </head>
+    <body>
+        <section>
+            
+
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+                <div class="mobile-expandable-menu">
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">Home Page</a></li>
+                            <li>
+                                <a href="culture_showcase.html"
+                                    >Culture Showcase</a
+                                >
+                            </li>
+                            <li>
+                                <a href="recipes&cooking.html"
+                                    >Recipes & Cooking</a
+                                >
+                            </li>
+                            <li>
+                                <a href="healthy_living.html">Healthy Living</a>
+                            </li>
+                            <li>
+                                <a href="sharing_area.html">Sharing Area</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="culture_showcase.html">Culture Showcase</a>
+                        </li>
+                        <li>
+                            <a href="recipes&cooking.html"
+                                >Recipes and Cooking</a
+                            >
+                        </li>
+                        <li>
+                            <a href="healthy_living.html">Healthy Living</a>
+                        </li>
+                        <li><a href="sharing_area.html">Sharing Area</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="wp4-search-container">
+                        <div class="search-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                class="wp4-search-input"
+                                aria-label="Search"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <header class="hero-header">
+            <img
+                src="assets/images/1.jpg"
+                alt="Recipe Explorer Banner"
+                class="hero-image"
+            />
+
+            <div class="hero-content">
+                <!-- Top-right: Weather -->
+                <div class="hero-weather">
+                    <div id="weather-widget" class="card">
+                        <p id="weather-day"></p>
+                        <img id="weather-icon" alt="Weather Icon" />
+                        <p id="weather-temp"></p>
+                    </div>
+                </div>
+
+                <!-- Left-middle: Title and Login -->
+                <div class="hero-left">
+                    <h1 class="hero-title">Recipe Explorer</h1>
+
+                    <button
+                        class="button button-secondary"
+                        onclick="location.href='users_space.html'"
+                    >
+                        Log in
+                    </button>
+                </div>
+
+                <!-- Bottom-right: About Us -->
+                <div class="hero-about">
+                    <button
+                        class="button button-secondary"
+                        onclick="location.href='aboutus.html'"
+                    >
+                        About us
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="showcase-section" aria-labelledby="showcase-title">
+                <h2 class="section-title">Showcase</h2>
+
+                <div class="showcase-container">
+                    <button class="arrow left" aria-label="Previous">
+                        &#8592;
+                    </button>
+
+                    <!-- Sliding track -->
+                    <div class="showcase-track">
+                        <div class="showcase-card">
+                            <img
+                                src="assets/images/aus food.jpg"
+                                alt="Traditional Australian Food"
+                            />
+                            <p>Traditional Australian Food</p>
+                        </div>
+                        <div class="showcase-card">
+                            <img
+                                src="assets/images/food img2.jpg"
+                                alt="Global Cuisines Exchange"
+                            />
+                            <p>Global Cuisines Exchange</p>
+                        </div>
+                        <div class="showcase-card">
+                            <img
+                                src="assets/images/food img3.jpg"
+                                alt="Recipe Exploration"
+                            />
+                            <p>Recipe Exploration</p>
+                        </div>
+                        <div class="showcase-card">
+                            <img
+                                src="assets/images/food img4.jpg"
+                                alt="Community Engagement"
+                            />
+                            <p>Community Engagement</p>
+                        </div>
+                        <div class="showcase-card">
+                            <img
+                                src="assets/images/food img5.jpg"
+                                alt="Connect & Share Stories"
+                            />
+                            <p>Connect & Share Stories</p>
+                        </div>
+                        <div class="showcase-card">
+                            <img
+                                src="assets/images/food img6.jpg"
+                                alt="Interactive Discussions"
+                            />
+                            <p>Interactive Discussions</p>
+                        </div>
+                    </div>
+
+                    <button class="arrow right" aria-label="Next">
+                        &#8594;
+                    </button>
+                </div>
+                <a
+                    href="culture_showcase.html"
+                    class="button button-secondary"
+                    aria-label="Check Out Now"
+                    >Check Out Now!</a
+                >
+            </section>
+
+            <div class="info-sections-wrapper">
+                <section class="newspaper-section" aria-labelledby="newspaper-title">
+                    <h2>Community Newspaper</h2>
+                    <p>
+                        Stay updated with our latest news, stories, and cultural
+                        highlights. Join our community mailing list!
+                    </p>
+                    <button class="button button-primary" id="subscribe-toggle">
+                        Subscribe Now!
+                    </button>
+
+                    <form
+                        class="subscribe-form hidden"
+                        id="community-form"
+                        aria-hidden="true"
+                        enctype="multipart/form-data"
+                    >
+                        <label for="subscriber-name">Full Name:</label>
+                        <input
+                            type="text"
+                            id="subscriber-name"
+                            name="name"
+                            required
+                        />
+
+                        <label for="subscriber-email">Email:</label>
+                        <input
+                            type="email"
+                            id="subscriber-email"
+                            name="email"
+                            required
+                        />
+
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="agree" required />
+                            I agree to receive newsletters and updates from this
+                            platform.
+                        </label>
+
+                        <button type="submit" class="button button-primary">
+                            Submit
+                        </button>
+                    </form>
+
+                    <p
+                        id="form-feedback"
+                        style="margin-top: 1rem; font-weight: bold"
+                    ></p>
+                    <div class="calendar-wrapper" aria-labelledby="calendar-title">
+                        <h3>Community Events Calendar</h3>
+                        <div class="calendar-filter">
+                            <label for="calendar-category" aria-label="Event Category Filter"
+                                >Filter by Type:</label
+                            >
+                            <select id="calendar-category">
+                                <option value="all">All</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="festival">Festival</option>
+                                <option value="webinar">Webinar</option>
+                            </select>
+                        </div>
+                        <div id="calendar"></div>
+                    </div>
+                </section>
+
+                <section class="aboutus-section" aria-labelledby="about-title">
+                    <h2>About Us</h2>
+                    <p>
+                        We are a community-focused platform dedicated to sharing
+                        food stories, preserving cultural heritage, and building
+                        inclusive connections through culinary traditions. Our
+                        team believes in promoting health, diversity, and
+                        belonging.
+                    </p>
+                    <div class="about-icons-grid">
+                        <div class="about-icon">
+                            <img
+                                src="assets/images/homepage/icon_1.png"
+                                alt="inclusive icon"
+                            />
+                        </div>
+                        <div class="about-icon">
+                            <img
+                                src="assets/images/homepage/icon_2.png"
+                                alt="preserving culture icon"
+                            />
+                        </div>
+                        <div class="about-icon">
+                            <img
+                                src="assets/images/homepage/icon_3.png"
+                                alt="Healthy living icon"
+                            />
+                        </div>
+                        <div class="about-icon">
+                            <img
+                                src="assets/images/homepage/icon_4.png"
+                                alt="empowerment icon"
+                            />
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <script type="module" src="js/homepape.js"></script>
+        <script type="module" src="js/modules/weather.js"></script>
+        <script type="module" src="js/modules/communityform.js"></script>
+        <!-- FullCalendar JS -->
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+        <!--END PAGE STRUCTURE-->
+    </body>
+</html>

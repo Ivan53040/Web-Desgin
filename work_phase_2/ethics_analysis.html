@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <title>WP2 - Ethics Analysis</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html" aria-current="home">Home</a></li>
+                <li>
+                    <a
+                        href="client_needs_analysis.html"
+                        aria-current="Client Needs Analysis"
+                        >Client Needs Analysis</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="ethics_analysis.html"
+                        aria-current="Ethics Analysis"
+                        >Ethics Analysis</a
+                    >
+                </li>
+                <li>
+                    <a href="user_stories.html" aria-current="User Stories"
+                        >User Stories</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="genai_mt_acknowledgement.html"
+                        aria-current="GenAI mt acknowledgement"
+                        >GenAI MT acknowledgement</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="accessibility_assessment.html"
+                        aria-current="Accessibility Assessment"
+                        >Accessibility Assessment</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <header>
+                <h1>Ethics Analysis</h1>
+            </header>
+
+            <section>
+                <h2>Background</h2>
+                <ul>
+                    <p>
+                        The client wants to build a third-party newsletter
+                        subscription plug-in the website, which is provided by
+                        one of our funders. It requires the users provides the
+                        following information:<br />
+                    </p>
+                    <div class="expandable-container">
+                        <button class="expand-btn">▼</button>
+                        <div class="expandable-content">
+                            <div class="response">
+                                <ul>
+                                    <li>• Full name</li>
+                                    <li>• Email address</li>
+                                    <li>• Occupation</li>
+                                    <li>• Annual income</li>
+                                    <li>• Household size</li>
+                                    <li>• Sexuality</li>
+                                    <li>• Gender</li>
+                                    <li>• Spending habits</li>
+                                    <li>• Type of phone they currently use</li>
+                                    <li>
+                                        • Monthly spend on dining out/takeaway
+                                        food
+                                    </li>
+                                    <li>
+                                        • Number of credit cards they have with
+                                        the credit limit on each card
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        However, the plug-in is collecting data that is not
+                        appropriate and may violates the The ACS Ethical
+                        Framework, this page will have a discussion on the
+                        ethical concerns and provides solutions to it.
+                    </p>
+                </ul>
+
+                <h2>Ethical Concern</h2>
+                <div class="flip-card-container" style="height: 500px">
+                    <!-- flip card number 1-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Transparency and User Consent(E1)</h3>
+                                <h4>
+                                    ACS Code of Professional Ethics<br />
+                                    Honesty - (2.1a, 2.1b)
+                                </h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    Users may not fully understand why personal
+                                    data (such as sexuality, income, and credit
+                                    card limits) is being collected. Lack of
+                                    transparency could be seen as
+                                    misrepresentation or dishonesty.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 2-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>Data Security and User Protection(E2)</h3>
+                                <h4>
+                                    ACS Code of Professional Ethics<br />
+                                    Trustworthiness - (2.2d, 2.2h)
+                                </h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    Collecting these sensitive informations may
+                                    increases the risk of data breaches. We
+                                    should ensure the security of protecting
+                                    user data.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 3-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Respect for User Privacy and Inclusivity(E3)
+                                </h3>
+                                <h4>
+                                    ACS Code of Professional Ethics<br />
+                                    Respect for Others - (2.3.1c, 2.3.1d,
+                                    2.3.1g)
+                                </h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    The form may collect unnecessary personal
+                                    data or lack inclusive options for users
+                                    with diverse identities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 4-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Ethical Responsibility in ICT and Public
+                                    Trust(E4)
+                                </h3>
+                                <h4>
+                                    ACS Code of Professional Ethics<br />
+                                    Respect for the Profession - (2.3.2a,
+                                    2.3.2c, 2.3.2g)
+                                </h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    We are risking the public trust in ICT
+                                    system if we try to integrate an intrusive
+                                    data-collection tool without questioning
+                                    it's purpose.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Ethical Solution and Pratical solution</h2>
+                <P>
+                    The following cards shows the ethical solution of the
+                    concern above and showing the practical solution while
+                    flipping the card.
+                <br></p>
+                <div class="flip-card-container" style="height: 500px">
+                    <!-- flip card number 1-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Ensuring users fully understand what they
+                                    are consenting to.(E1)
+                                </h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    ✅ Clear privacy notice to explain why the
+                                    data is being collected.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 2-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Preventing misrepresentation by clearly
+                                    stating the purpose of data collection.(E1)
+                                </h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    ✅ Checkbox consent for non-essential fields
+                                    (e.g., "I agree to share my financial
+                                    details for research purposes").
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 3-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Upholding user autonomy by allowing opt-outs
+                                    for sensitive data..(E1)
+                                </h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    ✅ Alternative subscription option**
+                                    allowing users to sign up with only an
+                                    email.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 4-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Protecting user data from unauthorized
+                                    access, avoiding potential harm.(E2)
+                                </h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    ✅ Limited data retention—store data only as
+                                    long as necessary(e.g., The data will be
+                                    delete when user unsubscribe the newspaper
+                                    plug-in).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 5-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Respecting user rights by minimizing
+                                    unnecessary data collection.(E3)
+                                </h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    ✅ Data minimization principle (only
+                                    collecting the necessary information such as
+                                    email/contact number)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flip card number 6-->
+                    <div class="flip-card" tabindex="0">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>
+                                    Prioritizing public interest over business
+                                    demands.(E4)
+                                </h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>
+                                    ✅ Advocate with the client to reduce the
+                                    amount of unnecessary data being collected.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box" style="margin-top: 17rem;">
+                    <h3>
+                        After analysing the plug-in, it is suggested to reduce some of the none necessary data to be collected:
+                        <li>• Full name(or Neckname)</li>
+                        <li>• Email address</li>
+                        <li><span style="text-decoration: line-through;">• Occupation</span></li>
+                        <li><span style="text-decoration: line-through;">• Annual income</span></li>
+                        <li><span style="text-decoration: line-through;">• Household size</span></li>
+                        <li>• Sexuality (become optional)</li>
+                        <li>• Gender (become optional)</li>
+                        <li>• Spending habits (become optional)</li>
+                        <li>• Type of phone they currently use</li>
+                        <li>• Monthly spend on dining out/takeaway food (become optional)</li>
+                        <li>
+                            <span style="text-decoration: line-through;">• Number of credit cards they have with the credit
+                            limit on each card</span>
+                        </li>
+                    </h3>
+                </div>
+            </section>
+            <!-- Linking External JavaScript -->
+            <script type="module" src="js/ethics_analysis.js"></script>
+        </div>
+    </body>
+</html>

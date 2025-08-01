@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/healthyliving.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <!--NEW-->
+
+        <title>Work Phase 4 - Healthy Living</title>
+    </head>
+    <body>
+        <section>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="homepage.html">Homepage</a> &gt;
+                <span>Healthy Living</span>
+            </nav>
+
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+                <div class="mobile-expandable-menu">
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">Home Page</a></li>
+                            <li>
+                                <a href="culture_showcase.html"
+                                    >Culture Showcase</a
+                                >
+                            </li>
+                            <li>
+                                <a href="recipes&cooking.html"
+                                    >Recipes & Cooking</a
+                                >
+                            </li>
+                            <li>
+                                <a href="healthy_living.html">Healthy Living</a>
+                            </li>
+                            <li>
+                                <a href="sharing_area.html">Sharing Area</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="culture_showcase.html">Culture Showcase</a>
+                        </li>
+                        <li>
+                            <a href="recipes&cooking.html"
+                                >Recipes and Cooking</a
+                            >
+                        </li>
+                        <li>
+                            <a href="healthy_living.html">Healthy Living</a>
+                        </li>
+                        <li><a href="sharing_area.html">Sharing Area</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="wp4-search-container">
+                        <div class="search-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                class="wp4-search-input"
+                                aria-label="Search"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <main>
+            <section class="healthy-living-section">
+                <div class="main-content two-column-layout" aria-label="Healthy Living Main Content">
+                    <div class="left-column" >
+                        <h2>Today's Healthy Recipe</h2>
+                        <div class="featured-recipe" aria-labelledby="recipe-title">
+                            <div class="image-wrapper">
+                                <img
+                                    src="assets/healthy/p1.jpg"
+                                    alt="Featured Healthy Recipe"
+                                />
+                                <br />
+                                <div class="health-meter-wrapper">
+                                    <h3>Healthy Meter</h3>
+                                    <div class="health-gauge">
+                                        <svg
+                                            viewBox="0 0 100 60"
+                                            class="gauge-arc"
+                                        >
+                                            <path
+                                                d="M10,50 A40,40 0 0,1 90,50"
+                                            />
+                                        </svg>
+                                        <div class="gauge-needle"></div>
+                                        
+                                        <div class="gauge-label">
+                                            Level
+                                            <span id="gauge-level">1</span>/10
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="nutrition-table-wrapper">
+                                        <h3>Nutrition per Serving</h3>
+                                        <table class="nutrition-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nutrient</th>
+                                                    <th>Amount</th>
+                                                    <th>%DV</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Energy</td>
+                                                    <td>210 kcal</td>
+                                                    <td>10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Fat</td>
+                                                    <td>13 g</td>
+                                                    <td>17%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Carbohydrates</td>
+                                                    <td>21 g</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Protein</td>
+                                                    <td>5.5 g</td>
+                                                    <td>11%</td>
+                                                </tr>
+                                            </tbody>
+                                            <tbody
+                                                class="hidden-rows"
+                                                style="display: none"
+                                            >
+                                                <tr>
+                                                    <td class="sub">
+                                                        – Saturated
+                                                    </td>
+                                                    <td>1.6 g</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sub">
+                                                        – Monounsaturated
+                                                    </td>
+                                                    <td>7.3 g</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sub">
+                                                        – Polyunsaturated
+                                                    </td>
+                                                    <td>1.9 g</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cholesterol</td>
+                                                    <td>0 mg</td>
+                                                    <td>0%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sodium</td>
+                                                    <td>85 mg</td>
+                                                    <td>4%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sub">
+                                                        – Dietary Fiber
+                                                    </td>
+                                                    <td>8 g</td>
+                                                    <td>29%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="sub">
+                                                        – Sugars
+                                                    </td>
+                                                    <td>3.5 g</td>
+                                                    <td>—</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Potassium</td>
+                                                    <td>448 mg</td>
+                                                    <td>10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Calcium</td>
+                                                    <td>30 mg</td>
+                                                    <td>2%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Iron</td>
+                                                    <td>1.4 mg</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vitamin C</td>
+                                                    <td>7.5 mg</td>
+                                                    <td>8%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vitamin E</td>
+                                                    <td>1.6 mg</td>
+                                                    <td>10%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Folate</td>
+                                                    <td>61 mcg</td>
+                                                    <td>15%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vitamin K</td>
+                                                    <td>15.8 mcg</td>
+                                                    <td>13%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <button
+                                            id="toggle-nutrition"
+                                            class="primary-button"
+                                            style="margin-top: 1rem"
+                                        >
+                                            Show More
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recipe-info">
+                                <h2>Healthy Avocado Toast</h2>
+                                <p>
+                                    This fiber-packed recipe is the perfect
+                                    energizing breakfast that supports heart
+                                    health and keeps you full longer.
+                                </p>
+                                <a
+                                    href="recipe_example.html"
+                                    class="primary-button"
+                                    >See Full Recipe</a
+                                >
+                            </div>
+                        </div>
+
+                        <section class="more-recipes-section" aria-labelledby="more-recipes">
+                            <h2>More Healthy Recipes</h2>
+                            <div class="recipe-card-grid">
+                                <!-- Recipe Card 1 -->
+                                <div class="recipe-card">
+                                    <a
+                                        href="recipe_example.html"
+                                        class="recipe-link"
+                                    >
+                                        <img
+                                            src="assets/healthy/m1.jpg"
+                                            alt="Grilled Veggie Bowl"
+                                    /></a>
+                                    <a
+                                        href="recipe_example.html"
+                                        class="recipe-title-link"
+                                        ><h3>Grilled Veggie Bowl</h3></a
+                                    >
+                                    <h4>Healthy Meter</h4>
+                                    <div class="mini-gauge">
+                                        <svg
+                                            viewBox="0 0 100 60"
+                                            class="mini-arc"
+                                        >
+                                            <path
+                                                d="M10,50 A40,40 0 0,1 90,50"
+                                            />
+                                        </svg>
+                                        <div
+                                            class="mini-needle"
+                                            style="transform: rotate(60deg)"
+                                        ></div>
+                                    </div>
+                                </div>
+
+                                <!-- Recipe Card 2 -->
+                                <div class="recipe-card">
+                                    <a
+                                        href="recipe_example.html"
+                                        class="recipe-link"
+                                    >
+                                        <img
+                                            src="assets/healthy/m2.jpg"
+                                            alt="Avocado Quinoa Salad"
+                                    /></a>
+                                    <a
+                                        href="recipe_example.html"
+                                        class="recipe-title-link"
+                                        ><h3>Avocado Quinoa Salad</h3></a
+                                    >
+                                    <h4>Healthy Meter</h4>
+                                    <div class="mini-gauge">
+                                        <svg
+                                            viewBox="0 0 100 60"
+                                            class="mini-arc"
+                                        >
+                                            <path
+                                                d="M10,50 A40,40 0 0,1 90,50"
+                                            />
+                                        </svg>
+                                        <div
+                                            class="mini-needle"
+                                            style="transform: rotate(50deg)"
+                                        ></div>
+                                    </div>
+                                </div>
+
+                                <!-- Recipe Card 3 -->
+                                <div class="recipe-card">
+                                    <a
+                                        href="recipe_example.html"
+                                        class="recipe-link"
+                                    >
+                                        <img
+                                            src="assets/healthy/m3.jpg"
+                                            alt="Berry Smoothie Bowl"
+                                    /></a>
+                                    <a
+                                        href="recipe_example.html"
+                                        class="recipe-title-link"
+                                        ><h3>Berry Smoothie Bowl</h3></a
+                                    >
+
+                                    <h4>Healthy Meter</h4>
+                                    <div class="mini-gauge">
+                                        <svg
+                                            viewBox="0 0 100 60"
+                                            class="mini-arc"
+                                        >
+                                            <path
+                                                d="M10,50 A40,40 0 0,1 90,50"
+                                            />
+                                        </svg>
+                                        <div
+                                            class="mini-needle"
+                                            style="transform: rotate(80deg)"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <aside class="latest-health-news" aria-labelledby="latest-news-heading">
+                        <h3>The Latest</h3>
+                        <ul>
+                            <li>
+                                <a href="article1.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t1.jpg"
+                                        alt="Tea for Blood Pressure"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Nutrition</span>
+                                    <br/ >
+                                    <a
+                                        href="article1.html"
+                                        class="news-link title"
+                                        >The Best Teas to Lower Blood
+                                        Pressure</a
+                                    >
+                                    <p class="meta">
+                                        2 hours ago • Dr. Jane Smith
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="article2.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t2.jpeg"
+                                        alt="Hydrating Drinks"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Hydration</span>
+                                    <br/ >
+                                    <a
+                                        href="article2.html"
+                                        class="news-link title"
+                                        >Top 5 Hydrating Summer Drinks</a
+                                    >
+                                    <p class="meta">3 hours ago • Camryn W.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="article3.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t3.jpg"
+                                        alt="Turmeric Shots"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Immunity</span>
+                                    <br/ >
+                                    <a
+                                        href="article3.html"
+                                        class="news-link title"
+                                        >Pineapple-Ginger Immunity Shots</a
+                                    >
+                                    <p class="meta">4 hours ago • G. Vazquez</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="article4.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t4.jpg"
+                                        alt="Plant-Based Diet Tips"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Plant-Based</span>
+                                    <a
+                                        href="article4.html"
+                                        class="news-link title"
+                                        >How to Start a Plant-Based Diet</a
+                                    >
+                                    <p class="meta">6 hours ago • M. Yates</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="article5.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t5.jpg"
+                                        alt="Morning Routine"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Wellness</span>
+                                    <a
+                                        href="article5.html"
+                                        class="news-link title"
+                                        >A Healthy Morning Routine That Works</a
+                                    >
+                                    <p class="meta">
+                                        8 hours ago • Dr. Rose Bennett
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="article6.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t6.jpg"
+                                        alt="Omega 3"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Nutrition</span>
+                                    <a
+                                        href="article6.html"
+                                        class="news-link title"
+                                        >Why Omega-3s Are Essential For Your
+                                        Brain</a
+                                    >
+                                    <p class="meta">9 hours ago • C. Lewis</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="article7.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t7.jpg"
+                                        alt="Desk Stretches"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Fitness</span>
+                                    <a
+                                        href="article7.html"
+                                        class="news-link title"
+                                        >5 Stretches to Do At Your Desk</a
+                                    >
+                                    <p class="meta">11 hours ago • Riley K.</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a href="article8.html" class="news-link">
+                                    <img
+                                        src="assets/healthy/t8.jpg"
+                                        alt="Gut Health"
+                                    />
+                                </a>
+                                <div>
+                                    <span class="tag">Digestive Health</span>
+                                    <a
+                                        href="article8.html"
+                                        class="news-link title"
+                                        >The Link Between Gut Health and Mood</a
+                                    >
+                                    <p class="meta">12 hours ago • S. Zhang</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <button
+                            id="toggle-news"
+                            class="primary-button"
+                            style="margin-top: 1rem"
+                        >
+                            Show More News
+                        </button>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <script type="module" src="js/healthy_living.js"></script>
+        <!--END PAGE STRUCTURE-->
+    </body>
+</html>

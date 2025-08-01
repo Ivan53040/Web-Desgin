@@ -1,0 +1,134 @@
+.user-sharing-section {
+  padding: 2rem 1rem;
+  background-color: #fffefc;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.sharing-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  
+}
+
+/* Shared Memories (left) */
+.sharing-gallery h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.photo-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Share Form (right) */
+.sharing-form-wrapper h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#photo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#photo-form input,
+#photo-form textarea {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#photo-form button {
+  align-self: center;
+}
+
+#form-feedback {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .sharing-content-wrapper {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .sharing-gallery {
+    flex: 7;
+  }
+
+  .sharing-form-wrapper {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.photo-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Crop image to fit area */
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  aspect-ratio: 4 / 3; /* Optional for consistent shape */
+}
+
+@media (min-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr); /* Show 3 per row */
+  }
+}

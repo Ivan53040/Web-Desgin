@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/sharing_area.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <title>Work Phase 4 - Sharing Area</title>
+    </head>
+    <body>
+        <section>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="homepage.html">Homepage</a> &gt;
+                <span>Sharing Area</span>
+            </nav>
+
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+                <div class="mobile-expandable-menu">
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">Home Page</a></li>
+                            <li>
+                                <a href="culture_showcase.html"
+                                    >Culture Showcase</a
+                                >
+                            </li>
+                            <li>
+                                <a href="recipes&cooking.html"
+                                    >Recipes & Cooking</a
+                                >
+                            </li>
+                            <li>
+                                <a href="healthy_living.html">Healthy Living</a>
+                            </li>
+                            <li>
+                                <a href="sharing_area.html">Sharing Area</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="culture_showcase.html">Culture Showcase</a>
+                        </li>
+                        <li>
+                            <a href="recipes&cooking.html"
+                                >Recipes and Cooking</a
+                            >
+                        </li>
+                        <li>
+                            <a href="healthy_living.html">Healthy Living</a>
+                        </li>
+                        <li><a href="sharing_area.html">Sharing Area</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="wp4-search-container">
+                        <div class="search-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                class="wp4-search-input"
+                                aria-label="Search"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <section class="user-sharing-section">
+            <div class="sharing-content-wrapper">
+                <!-- LEFT: Shared Photos -->
+                <div class="sharing-gallery">
+                    <h2>Shared Memories</h2>
+                    <div class="photo-gallery" id="photo-gallery"></div>
+                </div>
+
+                <!-- RIGHT: Share Form -->
+                <div class="sharing-form-wrapper">
+                    <h2>Share Your Food Memory</h2>
+                    <button
+                        id="toggle-memory-form"
+                        class="button button-primary"
+                    >
+                        Share My Memory
+                    </button>
+
+                    <div class="sharing-form hidden" id="memory-form-wrapper">
+                        <form id="photo-form" enctype="multipart/form-data">
+                            <label for="photo_title">Title:</label>
+                            <input
+                                type="text"
+                                name="photo_title"
+                                id="photo_title"
+                                required
+                            />
+
+                            <label for="photo_caption">Description:</label>
+                            <textarea
+                                name="photo_caption"
+                                id="photo_caption"
+                                required
+                            ></textarea>
+
+                            <label for="photo_location">Cook Time:</label>
+                            <input
+                                type="text"
+                                name="photo_location"
+                                id="photo_location"
+                                required
+                            />
+
+                            <label for="username">Your Name:</label>
+                            <input
+                                type="text"
+                                name="username"
+                                id="username"
+                                required
+                            />
+
+                            <label for="photo_file">Upload Image:</label>
+                            <input
+                                type="file"
+                                name="photo_file"
+                                id="photo_file"
+                                accept="image/*"
+                                required
+                            />
+
+                            <button type="submit" class="button button-primary">
+                                Submit
+                            </button>
+                        </form>
+                        <p id="form-feedback"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript Modules -->
+        <script type="module" src="js/sharing_area.js"></script>
+    </body>
+</html>

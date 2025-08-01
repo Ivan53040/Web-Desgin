@@ -1,0 +1,144 @@
+/* ================================
+   Hero Header Container (Mobile First)
+================================= */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* ================================
+   Background Image
+================================= */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+    z-index: -1;
+}
+
+/* ================================
+   Content Container
+================================= */
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none; /* Allows inner buttons to remain interactive */
+}
+
+/* ================================
+   Left-Aligned Text
+================================= */
+.hero-left {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    pointer-events: auto;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ddd;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+/* ================================
+   Login Button
+================================= */
+.login-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ================================
+   Weather Widget Box (Top Right)
+================================= */
+.hero-weather {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    pointer-events: auto;
+}
+
+#weather-widget.card {
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.6rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   About Link Button (Bottom Right)
+================================= */
+.hero-about {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    pointer-events: auto;
+}
+
+.about-link {
+    background-color: var(--background-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================
+   Desktop Enhancements
+================================= */
+@media (min-width: 768px) {
+    .hero-header {
+        height: 60vh; /* Or use 100vh for fullscreen */
+    }
+
+    .hero-title {
+        font-size: 5rem;
+        font-weight: bolder;
+    }
+
+    .login-btn {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .about-link {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+
+    .hero-weather {
+        right: 6rem;
+    }
+}

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/recipes&cooking.css" />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon.ico"
+        />
+        <!--NEW-->
+
+        <title>Work Phase 4 - Recipes & Cooking</title>
+    </head>
+    <body>
+        <section>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="homepage.html">Homepage</a> &gt;
+                <span>Recipes & Cooking</span>
+            </nav>
+
+            <nav id="nav-mobile" aria-label="Mobile Navigation">
+                <div class="mobile-menu-wrapper">
+                    <button id="menu-toggle" aria-label="Toggle Menu">
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                        <div class="hamburger"></div>
+                    </button>
+                </div>
+                <div class="mobile-expandable-menu">
+                    <div class="menu-panel main-menu">
+                        <ul>
+                            <li><a href="homepage.html">Home Page</a></li>
+                            <li>
+                                <a href="culture_showcase.html"
+                                    >Culture Showcase</a
+                                >
+                            </li>
+                            <li>
+                                <a href="recipes&cooking.html"
+                                    >Recipes & Cooking</a
+                                >
+                            </li>
+                            <li>
+                                <a href="healthy_living.html">Healthy Living</a>
+                            </li>
+                            <li>
+                                <a href="sharing_area.html">Sharing Area</a>
+                            </li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="wp4-desktop-nav" aria-label="Main Navigation">
+                <div class="wp4-nav-center-wrapper">
+                    <ul class="wp4-nav-list">
+                        <li>
+                            <a
+                                href="homepage.html"
+                                class="home-icon"
+                                aria-label="Homepage"
+                            >
+                                <img
+                                    src="assets/images/icon.png"
+                                    alt="Home"
+                                    class="nav-icon"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="culture_showcase.html">Culture Showcase</a>
+                        </li>
+                        <li>
+                            <a href="recipes&cooking.html"
+                                >Recipes and Cooking</a
+                            >
+                        </li>
+                        <li>
+                            <a href="healthy_living.html">Healthy Living</a>
+                        </li>
+                        <li><a href="sharing_area.html">Sharing Area</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                    <div class="wp4-search-container">
+                        <div class="search-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                class="wp4-search-input"
+                                aria-label="Search"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <main>
+            <section class="recipe-hub-section">
+                <div class="recipe-search-bar" aria-label="Recipe Search Bar">
+                    <h3>Search for recipes</h3>
+                    <input
+                        type="text"
+                        placeholder="🔍 Search for recipes..."
+                        aria-label="Search recipes"
+                        class="search-input"
+                    />
+                    <select class="search-type">
+                        <option value="">All Types</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="traditional">Traditional</option>
+                        <option value="seasonal">Seasonal</option>
+                    </select>
+
+                    <button class="button button-primary">
+                        Advanced Search
+                    </button>
+                    <a
+                        href="recipe_example.html"
+                        class="button button-secondary"
+                        >Search</a
+                    >
+                </div>
+                <div
+                    class="advanced-search-panel"
+                    id="advanced-search-panel"
+                    style="display: none"
+                >
+                    <form class="advanced-search-form">
+                        <label>
+                            Recipe Name:
+                            <input type="text" name="recipeName" />
+                        </label>
+
+                        <label>
+                            Ingredients:
+                            <input type="text" name="ingredients" />
+                        </label>
+
+                        <label>
+                            Country:
+                            <input type="text" name="country" />
+                        </label>
+
+                        <label>
+                            Cook Time: (minutes)
+                            <input type="number" name="cookTime" min="0" />
+                        </label>
+
+                        <label>
+                            Type:
+                            <select name="type">
+                                <option value="">All Types</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="traditional">Traditional</option>
+                                <option value="seasonal">Seasonal</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            ⚠️ Allergy ⚠️
+                            <span style="font-size: 0.9rem; color: gray"
+                                >(Do not contain)</span
+                            >
+                            <select name="allergy">
+                                <option value="">None</option>
+                                <option value="nuts">Nuts</option>
+                                <option value="dairy">Dairy</option>
+                                <option value="gluten">Gluten</option>
+                                <option value="soy">Soy</option>
+                                <option value="shellfish">Shellfish</option>
+                                <option value="eggs">Eggs</option>
+                            </select>
+                        </label>
+                        <button
+                            type="submit"
+                            class="button button-primary"
+                            href="recipe_example.html"
+                        >
+                            Advanced Search
+                        </button>
+                    </form>
+                </div>
+
+                <div class="recipe-hub-wrapper">
+                    <!-- Recommended Recipes -->
+                    <div
+                        class="recommended-column"
+                        aria-label="Recommended Recipes"
+                    >
+                        <h2 class="section-title">Recommended Recipes</h2>
+                        <div class="recipe-card-container">
+                            <!-- Repeat for 3 cards -->
+                            <div class="recipe-card">
+                                <img
+                                    src="assets/recipes/p1.jpg"
+                                    alt="Recipe 1"
+                                />
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <div class="text-info">
+                                            <h3>
+                                                Japanese Pork Cutlet and Egg
+                                                Rice Bowl
+                                            </h3>
+                                            <p class="description">
+                                                Bowl of crispy pork cutlet
+                                                simmered with egg and onions
+                                                over steamed rice.
+                                            </p>
+                                        </div>
+                                        <div class="rating-info">
+                                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                                            <p class="cook-time">
+                                                Est. cook time: 30 mins
+                                            </p>
+                                            <a
+                                                href="recipe_example.html"
+                                                class="button button-secondary"
+                                                style="
+                                                    width: 80px;
+                                                    font-size: 1rem;
+                                                "
+                                            >
+                                                Cook Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-card">
+                                <img
+                                    src="assets/recipes/p2.jpg"
+                                    alt="Recipe 2"
+                                />
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <div class="text-info">
+                                            <h3>Spiced Lamb Cutlets</h3>
+                                            <p class="description">
+                                                Delicious lamb seasoned with
+                                                native bush spices.
+                                            </p>
+                                        </div>
+                                        <div class="rating-info">
+                                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                                            <p class="cook-time">
+                                                Est. cook time: 45 mins
+                                            </p>
+                                            <a
+                                                href="recipe_example.html"
+                                                class="button button-secondary"
+                                                style="
+                                                    width: 80px;
+                                                    font-size: 1rem;
+                                                "
+                                            >
+                                                Cook Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-card">
+                                <img
+                                    src="assets/recipes/p3.jpg"
+                                    alt="Recipe 3"
+                                />
+                                <div class="card-content">
+                                    <div class="card-header">
+                                        <div class="text-info">
+                                            <h3>Outback Damper</h3>
+                                            <p class="description">
+                                                Traditional bush bread served
+                                                with golden syrup and tea.
+                                            </p>
+                                        </div>
+                                        <div class="rating-info">
+                                            <div class="stars">⭐⭐⭐⭐⭐</div>
+                                            <p class="cook-time">
+                                                Est. cook time: 60 mins
+                                            </p>
+                                            <a
+                                                href="recipe_example.html"
+                                                class="button button-secondary"
+                                                style="
+                                                    width: 80px;
+                                                    font-size: 1rem;
+                                                "
+                                            >
+                                                Cook Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Recipe -->
+                    <div class="submit-column">
+                        <h2
+                            class="recipe-section-title"
+                            aria-labelledby="submit-recipe-title"
+                        >
+                            Got a Great Recipe?
+                        </h2>
+                        <p class="submit-text">
+                            Share your culinary creation with our community!
+                        </p>
+                        <a
+                            href="submit_recipe.html"
+                            class="button button-primary submit-button"
+                            >Submit My Recipe</a
+                        >
+                    </div>
+                </div>
+            </section>
+            <section class="upload-hub-section">
+                <div class="upload-hub-wrapper">
+                    <!-- Newest Uploads -->
+                    <div class="newest-column" aria-label="Newest Uploads">
+                        <h2 class="section-title">Newest Uploads</h2>
+                        <div class="upload-grid">
+                            <!-- Upload Card -->
+                            <div class="upload-card">
+                                <img
+                                    src="assets/recipes/y1.jpg"
+                                    alt="Homemade Spring Rolls"
+                                />
+                                <div class="upload-info">
+                                    <div class="upload-text">
+                                        <h3>Homemade Spring Rolls</h3>
+                                        <p>
+                                            Fresh, crispy, and perfect as an
+                                            appetizer.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="recipe_example.html"
+                                        class="button button-secondary"
+                                        style="width: 80px; font-size: 1rem"
+                                        >Check Out Now!</a
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="upload-card">
+                                <img
+                                    src="assets/recipes/y2.jpg"
+                                    alt="Creamy Pumpkin Soup"
+                                />
+                                <div class="upload-info">
+                                    <div class="upload-text">
+                                        <h3>Creamy Pumpkin Soup</h3>
+                                        <p>
+                                            Velvety soup with roasted pumpkin,
+                                            garlic, and cream.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="recipe_example.html"
+                                        class="button button-secondary"
+                                        style="width: 80px; font-size: 1rem"
+                                        >Check Out Now!</a
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="upload-card">
+                                <img
+                                    src="assets/recipes/y3.jpg"
+                                    alt="Classic Beef Pie"
+                                />
+                                <div class="upload-info">
+                                    <div class="upload-text">
+                                        <h3>Classic Beef Pie</h3>
+                                        <p>
+                                            Golden flaky pastry filled with rich
+                                            slow-cooked beef.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="recipe_example.html"
+                                        class="button button-secondary"
+                                        style="width: 80px; font-size: 1rem"
+                                        >Check Out Now!</a
+                                    >
+                                </div>
+                            </div>
+
+                            <div class="upload-card">
+                                <img
+                                    src="assets/recipes/y4.jpg"
+                                    alt="Lemongrass Chicken Skewers"
+                                />
+                                <div class="upload-info">
+                                    <div class="upload-text">
+                                        <h3>Lemongrass Chicken Skewers</h3>
+                                        <p>
+                                            Juicy grilled chicken marinated in
+                                            lemongrass and garlic.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="recipe_example.html"
+                                        class="button button-secondary"
+                                        style="width: 80px; font-size: 1rem"
+                                        >Check Out Now!</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- You May Like This -->
+                    <div
+                        class="you-may-like-column"
+                        aria-label="You May Like This"
+                    >
+                        <h3 class="section-title">You May Like This</h3>
+                        <div class="image-rotator" data-index="0">
+                            <button class="arrow up" aria-label="Previous">
+                                &#9650;
+                            </button>
+                            <a href="recipe_example.html">
+                                <img
+                                    id="rotating-image-0"
+                                    src=""
+                                    alt="Food suggestion"
+                                />
+                            </a>
+                            <button class="arrow down" aria-label="Next">
+                                &#9660;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="submit-modal-overlay" id="submit-modal">
+                <div class="submit-modal">
+                    <button
+                        class="close-button"
+                        id="close-submit-modal"
+                        aria-label="Close"
+                    >
+                        ✖
+                    </button>
+                    <h2>Submit Your Recipe</h2>
+                    <form id="product-form" class="submit-form">
+                        <label for="product_name">Recipe Name *</label>
+                        <input
+                            type="text"
+                            id="product_name"
+                            name="product_name"
+                            required
+                        />
+
+                        <label for="product_owner">Owner *</label>
+                        <input
+                            type="text"
+                            id="product_owner"
+                            name="product_owner"
+                            required
+                        />
+
+                        <label for="product_description">Description *</label>
+                        <textarea
+                            id="product_description"
+                            name="product_description"
+                            required
+                        ></textarea>
+
+                        <label for="product_info1">Photo URL (optional)</label>
+                        <input
+                            type="text"
+                            id="product_info1"
+                            name="product_info1"
+                        />
+
+                        <label for="product_info2"
+                            >Estimated Cooking Time (optional)</label
+                        >
+                        <input
+                            type="text"
+                            id="product_info2"
+                            name="product_info2"
+                        />
+
+                        <label for="product_info3">Other Info (optional)</label>
+                        <input
+                            type="text"
+                            id="product_info3"
+                            name="product_info3"
+                        />
+
+                        <button type="submit">Submit</button>
+                        <div id="form-feedback"></div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <script type="module" src="js/recipes&cooking.js"></script>
+
+        <!--END PAGE STRUCTURE-->
+    </body>
+</html>

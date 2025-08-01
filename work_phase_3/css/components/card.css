@@ -1,0 +1,66 @@
+/* Background, shadows, and transitions specific to this page */
+.card {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    /* Changed flex-direction to row for side-by-side on mobile */
+    display: flex;
+    flex-direction: row;
+    width: 100%;              /* Take full available width inside container */
+    max-width: 100%;          /* Never overflow container */
+    /* flex: 1 1 30%; Removed this flex shorthand from the main rule */
+    /* justify-content: space-between; Removed this as it's less relevant for internal row layout */
+
+    /* Add some spacing between the image and text */
+    gap: 1rem; /* Adjust gap as needed */
+
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: flex-start; /* Align items to the top in the row */
+}
+
+/* Style for the image within the card on mobile */
+.card img {
+    width: 40%; /* Give the image a percentage of the width */
+    height: auto;
+    object-fit: contain;
+    /* flex-shrink: 0; Prevent image from shrinking */
+}
+
+/* You might need a container for your text content if it's not direct children */
+/* Assuming your structure is something like <div class="card"><img ...><div class="text-content">...</div></div> */
+.card .text-content {
+    width: 60%; /* Give the text content the remaining percentage */
+    /* flex-grow: 1; Allow text content to grow if needed */
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for larger screens (>= 768px) */
+@media (min-width: 768px) {
+    .card {
+        /* Revert or adjust flex-direction for larger screens if needed */
+        /* If cards are in a row on desktop, flex-direction might still be column inside */
+        /* The original code had flex-direction: column in the base rule,
+           so we'll keep that behavior for larger screens inside the card */
+        flex-direction: column; /* Stack content vertically on larger screens */
+        width: calc((100% - 2rem) / 3); /* Adjust 2rem based on total gaps */
+        /* flex: 1 1 auto; */ /* Adjust flex properties for cards in a row container */
+        gap: 0; /* Remove gap when stacking vertically */
+    }
+    .card img {
+        width: 100%; /* Image takes full width of the card on larger screens */
+        max-height: 5000px; /* Keep the max height logic if needed */
+        border-radius: 0.25rem;
+        object-fit: cover; /* Use cover for images on larger screens */
+    }
+     /* Reset text content width for larger screens */
+    .card .text-content {
+        width: 100%;
+    }
+}

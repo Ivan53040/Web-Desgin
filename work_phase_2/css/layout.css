@@ -1,0 +1,33 @@
+/* CSS Variables to Define Colour Scheme */
+:root {
+    --primary-color: #6B331E;         /* Warm brown */
+    --secondary-color: #20282E;       /* Tan / Light brown */
+    --accent-color: #331107;          /* Sienna / Rich earthy brown */
+    --text-color: #170300;            /* Deep brown for text */
+    --background-color: #F2F1EF;      /* Soft off-white */
+}
+
+/* Layout */
+
+.container {
+    height:max-content;
+    /*Full viewport height*/
+    width: 90%;
+    max-width: 80%;
+    /* 80% of the viewport width*/
+    margin: 0 auto;
+    background-color: white;
+    border: 1px;
+    border-radius: 8px;
+    /*Centers the container horizontally*/
+    padding: 1.5rem;
+    text-align: left;
+}
+
+/* Larger screens(e.g., tablets or desktops) */
+@media (min-width: 768px) {
+    .container {
+        width: 70vw;
+        /* 60% of the viewport width*/
+    }
+}

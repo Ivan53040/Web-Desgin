@@ -1,0 +1,190 @@
+/* ================================
+   Culture Showcase Base (Mobile First)
+================================= */
+.cultureshowcase-section {
+    padding: 2rem 1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.cultureshowcase-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* ================================
+   Images (Mobile)
+================================= */
+.img-main,
+.img-left,
+.img-right {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.img-main {
+    max-height: 320px;
+}
+
+.img-left {
+    max-height: 180px;
+}
+
+.img-right {
+    max-height: 240px;
+}
+
+/* ================================
+   Description Text
+================================= */
+.cultureshowcase-desc {
+    padding: 0.5rem 0;
+}
+
+.cultureshowcase-desc h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.cultureshowcase-desc p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* ================================
+   Navigation Section
+================================= */
+.cultureshowcase-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.page-buttons {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    background-color: transparent;
+}
+
+/* Arrows */
+.page-buttons .arrow {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+    vertical-align: middle;
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-buttons .arrow:hover:not(.disabled),
+.page-buttons .arrow:focus-visible:not(.disabled) {
+    color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+.page-buttons .arrow.disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}
+
+.page-buttons .arrow.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.page-buttons .arrow:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Page Number Buttons */
+#cultureshowcase-pages {
+    display: flex;
+    gap: 0.4rem;
+}
+
+#cultureshowcase-pages button {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cultureshowcase-pages button:hover,
+#cultureshowcase-pages button:focus-visible {
+    background-color: var(--primary-color);
+}
+
+#cultureshowcase-pages button.active {
+    background-color: var(--primary-color);
+}
+
+/* ================================
+   Transition Effects
+================================= */
+.cultureshowcase-grid img,
+.cultureshowcase-desc {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cultureshowcase-fade-out img,
+.cultureshowcase-fade-out .cultureshowcase-desc {
+    opacity: 0;
+}
+
+/* ================================
+   Desktop Layout Enhancements
+================================= */
+@media (min-width: 768px) {
+    .cultureshowcase-grid {
+        grid-template-columns: 2fr 1.2fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "img1 desc"
+            "img2 img3";
+        align-items: start;
+    }
+
+    .img-main {
+        grid-area: img1;
+        max-height: 30rem;
+    }
+
+    .cultureshowcase-desc {
+        grid-area: desc;
+        padding-left: 1rem;
+    }
+
+    .img-left {
+        grid-area: img2;
+        width: 80%;
+        margin-left: 2rem;
+        margin-top: 3rem;
+    }
+
+    .img-right {
+        grid-area: img3;
+        width: 90%;
+        justify-self: end;
+        max-height: 300px;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,107 @@
+/* ================================
+   Gallery Section (Mobile First)
+================================= */
+.gallery-section {
+  padding: 2rem 1rem;
+  max-width: 90vw;
+  margin: auto;
+}
+
+/* ================================
+   Gallery Grid
+   Mobile: 2 columns
+   Desktop: 4 columns
+================================= */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* ================================
+   Gallery Card
+================================= */
+.gallery-card {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-card h3 {
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* ================================
+   Modal Layout
+================================= */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.gallery-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================================
+   Modal Images
+================================= */
+.modal-images {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-images img {
+  width: 30%;
+  border-radius: 0.75rem;
+}

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <title>WP2 - GenAI mt Acknowledgement</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html" aria-current="home">Home</a></li>
+                <li>
+                    <a
+                        href="client_needs_analysis.html"
+                        aria-current="Client Needs Analysis"
+                        >Client Needs Analysis</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="ethics_analysis.html"
+                        aria-current="Ethics Analysis"
+                        >Ethics Analysis</a
+                    >
+                </li>
+                <li>
+                    <a href="user_stories.html" aria-current="User Stories"
+                        >User Stories</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="genai_mt_acknowledgement.html"
+                        aria-current="GenAI mt acknowledgement"
+                        >GenAI MT acknowledgement</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="accessibility_assessment.html"
+                        aria-current="Accessibility Assessment"
+                        >Accessibility Assessment</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <header>
+                <h1>GenAI MT Acknowledgement</h1>
+            </header>
+
+            <div class="box">
+                <p><b>
+                    For the website I made for workphrase 2, I made use of
+                    ChatGPT to help me generate some useful functions.
+                    <br />Which can make the user more accessible when visiting
+                    my website. <br />In this page, I will explan all the
+                    functions I generated, with the prompt to AI, the output and
+                    also what does it look like in the website.</b>
+                </p>
+            </div>
+            <br />
+            <div class="switchable-container">
+                <div class="switchable-tabs">
+                    <button class="switch-btn active" data-target="content-1">
+                        <b>How AI was used</b>
+                    </button>
+                    <button class="switch-btn" data-target="content-2">
+                        <b>How AI supported my learning</b>
+                    </button>
+                    <button class="switch-btn" data-target="content-3">
+                        <b>Evaluate AI’s effectiveness</b>
+                    </button>
+                    <button class="switch-btn" data-target="content-4">
+                        <b>Ethical considerations</b>
+                    </button>
+                </div>
+                <div
+                    class="switchable-content"
+                    style="text-align: left; font-weight: bold"
+                >
+                    <div id="content-1" class="content active">
+                        <p>
+                            I use the GenAI(ChatGPT) to assist my design of the
+                            webpage.<br />
+                            The main functions I used:<br />
+                            1. Generate .css and JavaScript for interactive
+                            components.<br />
+                            2. Create interview for user-stories<br />
+                            3. Provide Ideas for ethics analysis and
+                            accessibility assessment<br />
+                        </p>
+                    </div>
+                    <div id="content-2" class="content">
+                        <p>
+                            AI provides me the basic concept of the ACS
+                            Framework and WCAG principles.<br />
+                            It also narrows down the content for me so I can
+                            analysis easily. Overall, it helps me to understand
+                            a new concept and let me analyse easily.
+                        </p>
+                    </div>
+                    <div id="content-3" class="content">
+                        <p>
+                            ChatGPT does a great job for me. It provides a lot
+                            of information in a short times.<br />
+                            However, sometimes the ChatGPT will provide some
+                            outdated resource (e.g. it gives the old version of
+                            ACS Framework to me)so I need to analyse it
+                            carefully(not to copy directly) before using the
+                            informations.<br />
+                            It also provides me the idea of how to connect
+                            everything together and form a structured
+                            website.<br />
+                            In the future development, ChatGPT will still be my
+                            helpful assistance and support my learning.
+                        </p>
+                    </div>
+                    <div id="content-4" class="content">
+                        <p>
+                            There are some concerns about using AI:<br />
+                            1. Do I use too much AI / too rely on AI?<br />
+                            I think I do not use too much AI on my work, I
+                            mostly use AI for generating the component I need
+                            for the website.<br />
+                            Every information AI provided is being analyse
+                            before putting into the webpage.<br />
+                            2. Do I clearly acknowledge where and how I used
+                            AI?<br />
+                            Yes, In this GenAI MT Acknowledgement page, I
+                            clearly states out all the use of Use of AI
+                            generated materials and provided a reflection about
+                            using AI.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>AI AI-generated showcase</h2>
+            <div class="slider-container">
+                <button class="arrow left-arrow">&#8592;</button>
+
+                <div class="slider-window">
+                    <div class="slider-track">
+                        <div class="slider-item">
+                            <h2>Scroll down content</h2>
+                            AI Prompt: Can you make me a scroll down function
+                            for text, which the user use mouse to click on the
+                            arrow then and the text expand, and they can click
+                            it again to hide the text. I want it to be a
+                            component.css file for reuse.
+                            <h2>AI Response</h2>
+                            <h3>Components.css</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>/* Expandable container */</li>
+                                            <li>.expandable-container {</li>
+                                            <li>
+                                                width: 100%; /* Adjust width as
+                                                needed */
+                                            </li>
+                                            <li>text-align: left;</li>
+                                            <li>margin-bottom: 10px;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>/* Expand button */</li>
+                                            <li>.expand-btn {</li>
+                                            <li>cursor: pointer;</li>
+                                            <li>background: none;</li>
+                                            <li>border: none;</li>
+                                            <li>font-size: 18px;</li>
+                                            <li>margin-bottom: 5px;</li>
+                                            <li>transition: transform 0.3s;</li>
+                                            <li>}</li>
+
+                                            <li>.expand-btn.rotated {</li>
+                                            <li>transform: rotate(180deg);</li>
+                                            <li>}</li>
+
+                                            <li>/* Expandable content */</li>
+                                            <li>.expandable-content {</li>
+                                            <li>max-height: 0;</li>
+                                            <li>overflow: hidden;</li>
+                                            <li>
+                                                transition: max-height 0.5s
+                                                ease-out;
+                                            </li>
+                                            <li>background: white;</li>
+                                            <li>padding: 0 10px;</li>
+                                            <li>border-radius: 5px;</li>
+                                            <li>border: 1px solid #ccc;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>/* Response styling */</li>
+                                            <li>.response {</li>
+                                            <li>padding: 10px;</li>
+                                            <li>background-color: #f9f9f9;</li>
+                                            <li>border-radius: 5px;</li>
+                                            <li>}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>// expandable-text.js</li>
+                                            <li>
+                                                document.addEventListener("DOMContentLoaded",
+                                                function () {
+                                            </li>
+                                            <li>
+                                                document.querySelectorAll(".expandable-container").forEach(container
+                                                => {
+                                            </li>
+                                            <li>
+                                                const button =
+                                                container.querySelector(".expand-btn");
+                                            </li>
+                                            <li>
+                                                const content =
+                                                container.querySelector(".expandable-content");
+                                            </li>
+
+                                            <li>```</li>
+                                            <li>
+                                                button.addEventListener("click",
+                                                function () {
+                                            </li>
+                                            <li>
+                                                if (content.style.maxHeight) {
+                                            </li>
+                                            <li>
+                                                content.style.maxHeight = null;
+                                                // Collapse
+                                            </li>
+                                            <li>
+                                                button.classList.remove("rotated");
+                                            </li>
+                                            <li>} else {</li>
+                                            <li>
+                                                content.style.maxHeight =
+                                                content.scrollHeight + "px"; //
+                                                Expand
+                                            </li>
+                                            <li>
+                                                button.classList.add("rotated");
+                                            </li>
+                                            <li>}</li>
+                                            <li>});</li>
+                                            <li>});</li>
+                                            <li>```</li>
+                                            <li>});</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Function Showcase</h3>
+                            <br />
+                            <div class="expandable-container">
+                                <p>Click me here!</p>
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">Content in here.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <h2>Switchable content page</h2>
+                            AI Prompt: I want to make a switchable content page,
+                            which the useer can click on the top left , top
+                            middle and top right, the content will change
+                            accordingly (in compentent.css)
+                            <h2>AI Response</h2>
+                            <h3>Components.css</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>/* Container */</li>
+                                            <li>.switchable-container {</li>
+                                            <li>width: 100%;</li>
+                                            <li>max-width: 800px;</li>
+                                            <li>margin: auto;</li>
+                                            <li>text-align: center;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>/* Tab Buttons */</li>
+                                            <li>.switchable-tabs {</li>
+                                            <li>display: flex;</li>
+                                            <li>
+                                                justify-content: space-around;
+                                            </li>
+                                            <li>margin-bottom: 10px;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>.switch-btn {</li>
+                                            <li>flex: 1;</li>
+                                            <li>padding: 10px;</li>
+                                            <li>border: none;</li>
+                                            <li>background: #ddd;</li>
+                                            <li>cursor: pointer;</li>
+                                            <li>font-size: 16px;</li>
+                                            <li>transition: 0.3s;</li>
+                                            <li>}</li>
+
+                                            <li>.switch-btn.active {</li>
+                                            <li>background: #ff7f50;</li>
+                                            <li>color: white;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>/* Content Sections */</li>
+                                            <li>
+                                                .switchable-content .content {
+                                            </li>
+                                            <li>display: none;</li>
+                                            <li>padding: 15px;</li>
+                                            <li>background: #f1f1f1;</li>
+                                            <li>border-radius: 5px;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>
+                                                .switchable-content
+                                                .content.active {
+                                            </li>
+                                            <li>display: block;</li>
+                                            <li>}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>
+                                                document.addEventListener("DOMContentLoaded",
+                                                function () {
+                                            </li>
+                                            <li>
+                                                const buttons =
+                                                document.querySelectorAll(".switch-btn");
+                                            </li>
+                                            <li>
+                                                const contents =
+                                                document.querySelectorAll(".switchable-content
+                                                .content");
+                                            </li>
+                                            <li></li>
+                                            <li>```</li>
+                                            <li>buttons.forEach(button => {</li>
+                                            <li>
+                                                button.addEventListener("click",
+                                                function () {
+                                            </li>
+                                            <li>
+                                                // Remove active class from all
+                                                buttons and contents
+                                            </li>
+                                            <li>
+                                                buttons.forEach(btn =>
+                                                btn.classList.remove("active"));
+                                            </li>
+                                            <li>
+                                                contents.forEach(content =>
+                                                content.classList.remove("active"));
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                // Add active class to the
+                                                clicked button and corresponding
+                                                content
+                                            </li>
+                                            <li>
+                                                this.classList.add("active");
+                                            </li>
+                                            <li>
+                                                document.getElementById(this.dataset.target).classList.add("active");
+                                            </li>
+                                            <li>});</li>
+                                            <li>});</li>
+                                            <li></li>
+                                            <li>```</li>
+                                            <li></li>
+                                            <li>});</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Function Showcase</h3>
+                            <br />
+                            <div class="switchable-container">
+                                <div class="switchable-tabs">
+                                    <button
+                                        class="switch-btn active"
+                                        data-target="content-1"
+                                    >
+                                        <b>Switch 1</b>
+                                    </button>
+                                    <button
+                                        class="switch-btn"
+                                        data-target="content-2"
+                                    >
+                                        <b>Switch 2</b>
+                                    </button>
+                                    <button
+                                        class="switch-btn"
+                                        data-target="content-3"
+                                    >
+                                        <b>Switch 3</b>
+                                    </button>
+                                </div>
+                                <div class="switchable-content">
+                                    <div id="content-1" class="content active">
+                                        <h3>Content 1</h3>
+                                    </div>
+                                    <div id="content-2" class="content">
+                                        <h3>Content 2</h3>
+                                    </div>
+                                    <div id="content-3" class="content">
+                                        <h3>Content 3</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-item">
+                            <h2>Slider Container</h2>
+                            AI Prompt: I want to make a container for my
+                            content, the user can kick on the right/left arrow
+                            to switch the content. Also they can scoll right and
+                            left to change the contain
+                            <h2>AI Response</h2>
+                            <h3>Components.css</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>.slider-container {</li>
+                                            <li>display: flex;</li>
+                                            <li>align-items: center;</li>
+                                            <li>justify-content: center;</li>
+                                            <li>gap: 1rem;</li>
+                                            <li>width: 100%;</li>
+                                            <li>overflow: hidden;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>.slider-window {</li>
+                                            <li>width: 300px;</li>
+                                            <li>overflow: hidden;</li>
+                                            <li>border: 1px solid #ccc;</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>.slider-track {</li>
+                                            <li>display: flex;</li>
+                                            <li>
+                                                transition: transform 0.3s
+                                                ease-in-out;
+                                            </li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>.slider-item {</li>
+                                            <li>min-width: 300px;</li>
+                                            <li>padding: 1rem;</li>
+                                            <li>text-align: center;</li>
+                                            <li>background-color: #f2f2f2;</li>
+                                            <li>
+                                                border-right: 1px solid #ddd;
+                                            </li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>.arrow {</li>
+                                            <li>background: #eee;</li>
+                                            <li>border: none;</li>
+                                            <li>padding: 0.5rem 1rem;</li>
+                                            <li>cursor: pointer;</li>
+                                            <li>}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>
+                                                function setupContentSlider() {
+                                            </li>
+                                            <li>
+                                                const track =
+                                                document.querySelector(".slider-track");
+                                            </li>
+                                            <li>
+                                                const items =
+                                                document.querySelectorAll(".slider-item");
+                                            </li>
+                                            <li>
+                                                const leftArrow =
+                                                document.querySelector(".left-arrow");
+                                            </li>
+                                            <li>
+                                                const rightArrow =
+                                                document.querySelector(".right-arrow");
+                                            </li>
+                                            <li></li>
+                                            <li>
+                                                if (!track || items.length ===
+                                                0) return;
+                                            </li>
+                                            <li></li>
+                                            <li>let currentIndex = 0;</li>
+                                            <li>
+                                                const itemWidth =
+                                                items[0].offsetWidth;
+                                            </li>
+                                            <li></li>
+                                            <li>function updateSlider() {</li>
+                                            <li>
+                                                const offset = -currentIndex *
+                                                itemWidth;
+                                            </li>
+                                            <li>
+                                                track.style.transform =
+                                                `translateX(${offset}px)`;
+                                            </li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>
+                                                leftArrow.addEventListener("click",
+                                                () => {
+                                            </li>
+                                            <li>
+                                                currentIndex = (currentIndex - 1
+                                                + items.length) % items.length;
+                                            </li>
+                                            <li>updateSlider();</li>
+                                            <li>});</li>
+                                            <li></li>
+                                            <li>
+                                                rightArrow.addEventListener("click",
+                                                () => {
+                                            </li>
+                                            <li>
+                                                currentIndex = (currentIndex +
+                                                1) % items.length;
+                                            </li>
+                                            <li>updateSlider();</li>
+                                            <li>});</li>
+                                            <li></li>
+                                            <li>
+                                                // Optional: update on resize to
+                                                recalc itemWidth
+                                            </li>
+                                            <li>
+                                                window.addEventListener("resize",
+                                                () => {
+                                            </li>
+                                            <li>updateSlider();</li>
+                                            <li>});</li>
+                                            <li></li>
+                                            <li>updateSlider();</li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>
+                                                export { setupContentSlider };
+                                            </li>
+                                            <li>
+                                                import { setupContentSlider }
+                                                from
+                                                "./modules/ContentSlider.js";
+                                            </li>
+                                            <li>
+                                                document.addEventListener("DOMContentLoaded",
+                                                () => {
+                                            </li>
+                                            <li>setupContentSlider();</li>
+                                            <li>});</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Function Showcase</h3>
+                            <br />
+                            <h3>As the slider container used in this part</h3>
+                            <br />
+                        </div>
+                        <div class="slider-item">
+                            <h2>Value Box</h2>
+                            AI Prompt: I want to make a value box that can put
+                            text inside it, when the user hover over it, the box
+                            will have a small effect.
+                            <h2>AI Response</h2>
+                            <h3>Components.css</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>.value-box {</li>
+                                            <li>background-color: var(</li>
+                                            <li>--light-bg,</li>
+                                            <li>#f8f9fa</li>
+                                            <li>
+                                                ); /* Use color variable from
+                                                base.css */
+                                            </li>
+                                            <li>
+                                                border: 2px solid
+                                                var(--primary-color, #007bff);
+                                                /* Use primary theme color */
+                                            </li>
+                                            <li>
+                                                border-radius: 8px; /* Rounded
+                                                corners */
+                                            </li>
+                                            <li>
+                                                padding: 15px 20px; /* Space
+                                                inside the box */
+                                            </li>
+                                            <li>
+                                                margin: 10px 0; /* Space between
+                                                boxes */
+                                            </li>
+                                            <li>
+                                                font-weight: 500; /* Medium
+                                                weight for emphasis */
+                                            </li>
+                                            <li>
+                                                color: var(--text-color, #333);
+                                                /* Text color from base.css */
+                                            </li>
+                                            <li>
+                                                text-align: center; /* Align
+                                                text properly */
+                                            </li>
+                                            <li>
+                                                display: block; /* Ensure it
+                                                spans full width */
+                                            </li>
+                                            <li>
+                                                transition: all 0.3s
+                                                ease-in-out; /* Smooth hover
+                                                effects */
+                                            </li>
+                                            <li>}</li>
+                                            <li></li>
+                                            <li>.value-box:hover {</li>
+                                            <li>
+                                                background-color:
+                                                var(--hover-bg, #e9ecef); /*
+                                                Subtle hover effect */
+                                            </li>
+                                            <li>
+                                                border-color:
+                                                var(--hover-border, #0056b3); /*
+                                                Darker border on hover */
+                                            </li>
+                                            <li>}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Function Showcase</h3>
+                            <br />
+                            <div class="value-box">
+                                <h3>Content in here!</h3>
+                            </div>
+
+                            <br />
+                        </div>
+                        <div class="slider-item">
+                            <h2>interviewee</h2>
+                            Description: The three interviewee of user-stories
+                            are acutally AI, as provides 5-7questions to them,
+                            ChatGPT response me to sitmulate different
+                            stakeholder in the society.
+                            <h2>AI Response</h2>
+                            <h3>Questions</h3>
+                            <div class="expandable-container">
+                                <button class="expand-btn">▼</button>
+                                <div class="expandable-content">
+                                    <div class="response">
+                                        <ul>
+                                            <li>
+                                                What do you think is the most
+                                                important elements of a recipe
+                                                sharing platfrom?
+                                            </li>
+                                            <li>
+                                                2. Do you interested in
+                                                exploring other country’s food?
+                                                What do you care most about when
+                                                trying to cook these food?
+                                            </li>
+                                            <li>
+                                                3. If there is a platform for
+                                                you to meet new people, what is
+                                                the function you care the most?
+                                            </li>
+                                            <li>
+                                                4. What do you think about
+                                                eating healthy?What do you want
+                                                to know the most for a healthy
+                                                diet cooking?
+                                            </li>
+                                            <li>
+                                                5. Have you find trouble cooking
+                                                yourself?If there is a video
+                                                teaching you to cook, what is
+                                                the important elements to be
+                                                included?
+                                            </li>
+                                            <li>
+                                                Questions specifically for
+                                                community member
+                                            </li>
+                                            <li>
+                                                6. If there is a online platfrom
+                                                letting you to showcase the
+                                                tradition Australian food
+                                                culture, what do you think is
+                                                most important to be included?
+                                            </li>
+                                            <li>
+                                                7. If you can introduce the
+                                                Australian food and ingredient
+                                                to the society in the website,
+                                                what will you do?
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more items as needed -->
+                    </div>
+                </div>
+
+                <button class="arrow right-arrow">&#8594;</button>
+            </div>
+        </div>
+
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/genai_mt_acknowledgement.js"></script>
+    </body>
+</html>

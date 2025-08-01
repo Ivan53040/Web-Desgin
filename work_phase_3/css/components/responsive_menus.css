@@ -1,0 +1,84 @@
+/* MENUS */
+/* Base styles */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#nav-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 999999; /* ✅ This brings it above images */
+    
+}
+
+
+#nav-mobile ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--background-color);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0.5rem 0;
+}
+
+#nav-mobile ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#nav-desktop {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999999;
+}
+
+#nav-desktop ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--background-color);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0.5rem 0; /* adds space above and below for the "box" */
+}
+
+
+#nav-desktop ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+/* Responsive control */
+/* Media query should be below here */
+
+@media screen and (min-width: 768px) {
+    #nav-desktop {
+        display: block;
+    }
+
+    #nav-mobile {
+        display: none;
+    }
+}

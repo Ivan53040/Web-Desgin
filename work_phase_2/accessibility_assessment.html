@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <title>WP2 - Accessibility Assessment</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <ul class="menu">
+                <li><a href="index.html" aria-current="home">Home</a></li>
+                <li>
+                    <a
+                        href="client_needs_analysis.html"
+                        aria-current="Client Needs Analysis"
+                        >Client Needs Analysis</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="ethics_analysis.html"
+                        aria-current="Ethics Analysis"
+                        >Ethics Analysis</a
+                    >
+                </li>
+                <li>
+                    <a href="user_stories.html" aria-current="User Stories"
+                        >User Stories</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="genai_mt_acknowledgement.html"
+                        aria-current="GenAI mt acknowledgement"
+                        >GenAI MT acknowledgement</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="accessibility_assessment.html"
+                        aria-current="Accessibility Assessment"
+                        >Accessibility Assessment</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <header>
+                <h1>Accessibility Assessment</h1>
+            </header>
+            <div class="switchable-container">
+                <div class="switchable-tabs">
+                    <button class="switch-btn active" data-target="content-1">
+                        <b>Perceivable</b>
+                    </button>
+                    <button class="switch-btn" data-target="content-2">
+                        <b>Operable</b>
+                    </button>
+                    <button class="switch-btn" data-target="content-3">
+                        <b>Understandable</b>
+                    </button>
+                </div>
+                <div class="switchable-content">
+                    <div id="content-1" class="content active">
+                        <h2>Perceivable</h2>
+                        <h3>
+                            Definition:Users with visual impairments or hearing
+                            disabilities require alternative ways to access
+                            content.
+                        </h3>
+                        <br />
+                        <div class="box-container">
+                            <div class="box">
+                                <h3>1.1. Text Alternatives</h3>
+                                <br />
+
+                                <b>1.1.1 Non-text Content</b><br />
+                                Provide recipe photos, ingredient lists, cooking
+                                steps.
+                            </div>
+                            <div class="box">
+                                <h3>1.2 Time-Based Media</h3>
+                                <br />
+                                <b>1.2.2 Captions(Prerecorded)</b><br />
+                                Offer closed captions for all cooking videos to
+                                support users who are deaf or hard of hearing.
+                                <b>1.2.5 Audio Description (Prerecorded) </b
+                                ><br />
+                                Include audio narration of key visual
+                                elements(e.g. importance steps) in cooking
+                                videos.
+                            </div>
+                            <div class="box">
+                                <h3>1.3 Adaptable</h3>
+                                <br />
+                                <b>1.3.1 Info and Relationships</b><br />
+                                Use semantic HTML (headings, lists, tables) so
+                                screen readers can interpret recipe structures.
+                            </div>
+                            <div class="box">
+                                <h3>1.4 Distinguishable</h3>
+                                <br />
+                                <b>1.4.1 Use of Color</b><br />
+                                Ensure color is not the only method to convey
+                                information (e.g., allergens marked with
+                                symbols, not just red text).<br />
+                                <b>1.4.10 Adjustable Playback Speed</b><br />
+                                Allow users to slow down or speed up cooking
+                                tutorial videos for better comprehension.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content-2" class="content">
+                        <h2>Operable</h2>
+                        <h3>
+                            Definition:Users with motor impairments or those who
+                            rely on keyboard navigation need a site that can be
+                            accessed without a mouse.
+                        </h3>
+                        <br />
+                        <div class="box-container">
+                            <div class="box">
+                                <h3>2.1 Keyboard Accessible</h3>
+                                <br />
+                                <b>2.1.1 Keyboard</b><br />
+                                Ensure all interactive elements (recipe steps,
+                                video controls, navigation) are
+                                keyboard-accessible.(e.g. space to play/stop,
+                                right key to fast forward)<br />
+                                <b>2.1.2 No Keyboard Trap</b><br />
+                                Users should be able to navigate in and out of
+                                every element using only a keyboard.(e.g.
+                                backspace to back to previous page)
+                            </div>
+                            <div class="box">
+                                <h3>2.2 Enough Time</h3>
+                                <br />
+                                <b>2.2.1 Timing Adjustable</b><br />
+                                Allow users to pause, extend, or disable time
+                                limits on recipe steps or instructional videos.
+                                <b>2.2.2 Pause, Stop, Hide</b><br />
+                                Provide pause/resume controls for auto-scrolling
+                                recipe pages or autoplay videos.
+                            </div>
+                            <div class="box">
+                                <h3>2.3 Seizures and Physical Reactions</h3>
+                                <br />
+                                <b>2.3.1 Three Flashes or Below</b><br />
+                                Ensure that flashing content (animations, video
+                                transitions) does not exceed three flashes per
+                                second.
+                            </div>
+                            <div class="box">
+                                <h3>2.4 Navigable</h3>
+                                <br />
+                                <b>2.4.2 Page Titled</b><br />
+                                Ensure recipe pages have clear and descriptive
+                                titles for searchability.(e.g. tags catagory)<br />
+                                <b>2.4.4 Link Purpose (In Context)</b><br />
+                                Avoid vague links like "Click Here"—use
+                                descriptive text like "View Full Recipe".<br />
+                                <b
+                                    >2.4.11 Provide Alternative Navigation
+                                    Methods</b
+                                ><br />
+                                Implement voice search or shortcut keys for easy
+                                recipe lookup.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content-3" class="content">
+                        <h2>Understandable</h2>
+                        <h3>
+                            Definition:Users with cognitive disabilities or
+                            non-native language speakers need clear, structured
+                            instructions for recipes.
+                        </h3>
+                        <br />
+                        <div class="box-container">
+                            <div class="box">
+                                <h3>3.1 Readable</h3>
+                                <br />
+                                <b>3.1.1 Language of Page</b><br />
+                                Use language attributes (lang="en") to help
+                                screen readers detect the correct language.
+                                <b>3.1.2 Language of Parts</b><br />
+                                Mark foreign food names (e.g., lang="ja" for
+                                "寿司" (sushi)) so screen readers pronounce them
+                                correctly.
+                            </div>
+                            <div class="box">
+                                <h3>3.2 Predictable</h3>
+                                <br />
+                                <b>3.2.1 On Focus</b><br />
+                                Avoid sudden content changes when a user clicks
+                                on a form or a button.<br />
+                                <b> 3.2.3 Consistent Navigation </b><br />
+                                Ensure menus, sidebars, and page layouts remain
+                                consistent across recipes.<br />
+                                <b
+                                    >3.2.5 Consistent Terminology and
+                                    Instructions</b
+                                ><br />
+                                Use the same names for ingredients across all
+                                recipes (e.g., always use "cornflour" instead of
+                                "corn statch").
+                            </div>
+                            <div class="box">
+                                <h3>3.3 Input Assistance</h3>
+                                <br />
+                                <b>3.3.1 Error Identification</b><br />
+                                Avoid sudden content changes when a user clicks
+                                on a form or a button.<br />
+                                <b>3.3.2 Labels or Instructions</b><br />
+                                Ensure input fields (e.g., "Enter amount of
+                                flour") provide units of measurement(e.g. gam)
+                                for clarity.<br />
+                                <b>3.3.6 Error Prevention</b><br />
+                                Ask users to confirm recipe submissions before
+                                posting to avoid accidental errors.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Linking External JavaScript -->
+        <script type="module" src="js/accessibility_assessment.js"></script>
+    </body>
+</html>
