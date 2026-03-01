@@ -86,7 +86,7 @@ This approach reinforces professional project workflows and reflects real-world 
 
 - Front-end fundamentals (HTML/CSS/JS)
 
-Publishing with GitHub Pages
+- Publishing with GitHub Pages
 
 👤 Author
 
